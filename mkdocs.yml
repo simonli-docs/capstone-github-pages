@@ -1,0 +1,28 @@
+site_name: Capstone Design Guidebook
+
+nav:
+  - Home: index.md
+  - 1. Introduction: chapter_1_introduction.md
+  - 2. Conceptual Design: chapter_2_conceptual_design.md
+  - 3. Design Development: chapter_3_design_development.md
+  - 4. Design Verification: chapter_4_design_verification.md
+  - 5. Project Management: chapter_5_project_management.md
+  - 6. Design Communication: chapter_6_design_communication.md
+
+theme:
+  name: material
+  features:
+    - navigation.expand
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - footnotes
+  - pymdownx.caret
