@@ -1,0 +1,998 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter_3_design_development/">
+      
+      
+        <link rel="next" href="../chapter_5_project_management/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>4. Design Verification - Capstone Design Guidebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-4-design-verification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Capstone Design Guidebook" class="md-header__button md-logo" aria-label="Capstone Design Guidebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Capstone Design Guidebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. Design Verification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Capstone Design Guidebook" class="md-nav__button md-logo" aria-label="Capstone Design Guidebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Capstone Design Guidebook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_1_introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_2_conceptual_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Conceptual Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_3_design_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Design Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Design Verification
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Design Verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-design-verification-and-scientific-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Design verification and scientific practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-design-verification-versus-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2: Design verification versus validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-what-to-do-in-design-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3: What to do in design verification?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-decide-on-the-scope-of-verification-task-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4: Decide on the scope of verification (Task 1)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-develop-a-test-plan-task-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5: Develop a test plan (Task 2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5: Develop a test plan (Task 2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#question-1-simulation-or-prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 1: Simulation or prototyping?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question-2-what-to-consider-when-planning-for-prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 2: What to consider when planning for prototyping?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question-3-how-many-tests-for-design-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 3: How many tests for design verification?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-interpret-the-test-results-task-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6: Interpret the test results (Task 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_5_project_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Project Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_6_design_communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Design Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#41-design-verification-and-scientific-practice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Design verification and scientific practice
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-design-verification-versus-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2: Design verification versus validation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-what-to-do-in-design-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3: What to do in design verification?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-decide-on-the-scope-of-verification-task-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4: Decide on the scope of verification (Task 1)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-develop-a-test-plan-task-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5: Develop a test plan (Task 2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5: Develop a test plan (Task 2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#question-1-simulation-or-prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 1: Simulation or prototyping?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question-2-what-to-consider-when-planning-for-prototyping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 2: What to consider when planning for prototyping?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#question-3-how-many-tests-for-design-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question 3: How many tests for design verification?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-interpret-the-test-results-task-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6: Interpret the test results (Task 3)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-4-design-verification">Chapter 4: Design Verification</h1>
+<p>The stage of design verification is motivated by this question: How do we know that the final design solution is working well as intended?</p>
+<p>While the need of design verification sounds obvious, it can be easily overlooked. For example, it can be commonly misconceived that the completion of a prototype is the destination of a capstone project. However, simply having a prototype does not imply a good design quality. More work is needed, and it is all about design verification.</p>
+<p>In engineering practice, companies and organizations spend a lot of time and effort in design verification. Listed below are some examples.</p>
+<ul>
+<li>Biomedical: Release of a new drug (or vaccine) requires various stages of testing. These testing procedures are regulated rigorously by health organizations.</li>
+<li>Software: Alpha and beta testing are common to examine the quality of the software tool (or system) in view of internal developers and external users.</li>
+<li>Mechanical: Manufacturers need to demonstrate safety features of new vehicles through testing and show evidence that the new vehicles meet the safety standards.</li>
+</ul>
+<p>Design verification should only be conducted after the design solution is completely done. In practice, design verification can be conducted by a third-party team, which is independent of the design development team. The results of design verification may lead to design modifications. Given a short 8-month period of capstone projects, the actual changes after design verification may not be practical, the design team should consider using the verification results for design recommendations.</p>
+<h2 id="41-design-verification-and-scientific-practice">4.1. Design verification and scientific practice</h2>
+<p>Whenever people talk about "design," we can easily perceive it as "subjective" activities. Surely, as designers are "human subjects," we cannot avoid some subjective nature of design activities. At the same time, we can also provide more objective ground for engineering design work so that the final design solution is not completely subjective. One
+aspect of it is to treat design verification as a kind of scientific practice.</p>
+<p>In view of the tradition of scientific research, we can treat the final design solution as a scientific theory, and this "theory" tries to claim that it can solve the original design problem. No matter how beautiful a theory (or a design solution) may sound, it needs experiments (or design testing) to support its claim.</p>
+<p>Design testing and experiments are the means to obtain observable evidence. The objective ground of observable evidence is that other people can repeat the experiments and expect to receive similar results. Observable evidence cannot "prove" the merits of a design solution; it can only be used to "argue" how well the design solution solves the design problem. In other words, we can say that design verification is an art of arguing (e.g., how capable we can present convincing observable evidence to justify the design work).</p>
+<p>How can we develop observable evidence in design verification? Generally, there can be two main approaches: numerical analysis and physical testing, which will be discussed in subsequent sections.</p>
+<h2 id="42-design-verification-versus-validation">4.2: Design verification versus validation</h2>
+<p>In a more common and rigorous use of terminology, there is a difference between verification and validation. Verification can be generally interpreted as "internal checking," mainly verifying if the design solution meets the specifications and is free from internal errors.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>A specification states that the motion of a robotic arm from points A to B should be completed in 3 seconds. Physical experiments can be used to check if this specification can be met.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Software codes can be compiled without errors, and they generate expected outcomes.</p>
+</div>
+<p>Validation can be generally interpreted as "external checking," which examines if the design solution meets the needs of users.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that a robotic arm is intended to move parts from a CNC machine to a conveyor in a production system. One validation aspect is to examine how well this robotic arm can complete this moving task and improve the system's productivity.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that the software system is intended to support the check-in procedure for train passengers. One validation aspect is to examine how well the software system can reduce the average time of passengers used in the check-in procedure.</p>
+</div>
+<p>In this guide, we do not specifically differentiate the use of verification or validation in writing, and all relevant activities are labeled as design verification for simplicity. The design team is welcomed to make the distinction when they communicate their design work.</p>
+<h2 id="43-what-to-do-in-design-verification">4.3: What to do in design verification?</h2>
+<p>Figure 1 illustrates a structure of design tasks for design verification. The stage of design verification starts with a design solution that was developed from design development. Then, the design team can consider these three types of design tasks procedurally to develop observable evidence for design verification.</p>
+<ul>
+<li>Task 1: Decide on the scope of verification. Design verification can demand a lot of effort. The design team needs to prioritize their aims of verification given limited time and resources.</li>
+<li>Task 2: Develop a test plan. A test plan should outline and explain how the design team plans to conduct design testing or experiments.</li>
+<li>Task 3: Analyze the verification results. This can involve statistical analysis to inform test results and draw conclusions.</li>
+</ul>
+<p>Background research can support designers in conducting these design tasks. Examples include learning new prototyping techniques and experimental procedures, checking regulations related to design testing, and exploring benchmark performance related to similar design solutions.</p>
+<p>Problem framing in design verification is about how to plan for these design tasks so that observable evidence about the quality of the design solution can be collected and examined in an organized manner.</p>
+<p><img alt="" src="../images/figure_4_1.png" /></p>
+<p>Figure 1. Structure of design tasks in design verification</p>
+<h2 id="44-decide-on-the-scope-of-verification-task-1">4.4: Decide on the scope of verification (Task 1)</h2>
+<p>What is the target information that we want to collect during design verification? We can start our thinking back to conceptual design: What specifications and performance metrics have we defined during conceptual design? Accordingly, we can start to plan the scope of design verification by considering the following.</p>
+<ul>
+<li>Physical properties (e.g., does the design solution meet the specifications?)</li>
+<li>Design functions (e.g., do the design functions work as intended?)</li>
+<li>Performance metrics (e.g., how well the design solution is performing?)</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example: HVAC design</p>
+<p>As the design team is not expected to build the HVAC system, the verification effort will primarily focus on technical analysis.</p>
+<ul>
+<li>On physical properties, the design team can check some core specifications such as equipment capacities versus load requirements. Cost analysis can be conducted to estimate if the HVAC system can be implemented within the budget. Environmental analysis can be conducted to estimate the energy consumption and carbon emission from system operations.</li>
+<li>On design functions, the design team may skip this aspect as we do not identify relevant functions that can be verified in this project's context.</li>
+<li>On performance metrics, if some equipment or measures (e.g., new energy control) are designed in the HVAC system, the design team can consider energy consumption (or energy use intensity, EUI) and carbon emission as target performance metrics. Another possible choice can be the breakeven period (e.g., increased initial cost versus saved  operational cost).</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Snow removal device</p>
+<p>Suppose that the design team does not plan to build the whole snow removal device due to the time constraint. The verification effort can focus on technical analysis and physical testing.</p>
+<ul>
+<li>On physical properties, the design team can check some core specifications such as the weight and size of the core system and the motor's torque and efficiency.</li>
+<li>On design functions, the design team can build some partial systems (or sub-systems) to demonstrate and examine some core functions. One function is to remove snow without autonomous features. Another function is to track a given path autonomously without the snow removal function. Another function is to avoid a planned obstacle  autonomously.</li>
+<li>On performance metrics, the design team can measure the efficiency of the snow removal function (e.g., time required to remove a given amount of snow). The design team can also measure the efficacy of the autonomous features by checking how well the device can work around predefined, difficult conditions on their own.</li>
+</ul>
+</div>
+<p>The design team is encouraged to take the "close-the-loop" perspective. That is, as conceptual design has thoroughly identified the design specifications and performance metrics, the effort of design verification is to check the design solution based on what have been discussed in conceptual design.</p>
+<p>While it is attempting to verify and test "everything," our time and resources will simply not allow us to do so. Thus, a more practical perspective is to consider (1) the value of observable evidence for design verification and (2) the effort and resources required to obtain the piece of observable evidence. A good case will be about having a relevant piece of observable evidence (e.g., most stakeholders want to see this information) that can be obtained with manageable efforts and resources.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: HVAC design (trade-off example)</p>
+<p>The design team has a chance to receive a heat-recovery device donated by a company. As one option for design verification, the design team can try to operate this device and observe how energy saving can be achieved by using this device. However, by doing so, the design team does not have enough time to prepare and run building energy simulation. By choosing between (1) physical testing of a heat-recovery device and (2) building energy simulation, we would suggest going for building energy simulation because such verification work speaks directly to the purpose of the design project.</p>
+<p>Of course, the choice is not completely exclusive (i.e., the design team does not have to choose one of the two). The design team can shift their work effort, e.g., 70% for energy simulation and 30% for physical testing. One message of this example is to explain how to stay focused on the purpose of design verification when allocating work effort to different tasks.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Snow removal design (trade-off example)</p>
+<p>The design team has two pathways for design verification. In pathway #1, the design team can build an integrated system and demonstrate how the device moves autonomously on a dry ground. In pathway #2, the design team can build and demonstrate two systems that perform the snow-removal function and the autonomous function, respectively. By choosing between these two pathways, we would suggest going for pathway #2 because the primary purpose of the project is snow removal. In pathway #1, the outcome can be perceived as building an autonomous vehicle, where the snow-removal function is not apparent.</p>
+<p>Of course, the design team does not have to choose one of the two, and they shift the work to balance the verification effort between the snow removal and autonomous functions. Just in mind: While it is fascinating to show the autonomous function, it can be a big miss without showing the snow removal function clearly in design verification. Also, the design team can try to prepare the verification content so that the sponsoring company can see how to continue this design and development work.</p>
+</div>
+<h2 id="45-develop-a-test-plan-task-2">4.5: Develop a test plan (Task 2)</h2>
+<p>A test plan can outline and explain the tasks for design verification so that team members and stakeholders can work together for the common goal. Suppose that the design team has identified the general scope of design verification for their project (i.e., Task 1 in Section 4.4). At a high level, a test plan needs to answer three questions:</p>
+<ul>
+<li>Question 1: How does the design team plan to obtain observable evidence, simulation and/or prototyping?</li>
+<li>Question 2: What should we consider when planning for prototyping?</li>
+<li>Question 3: How many tests or experiments that the design team plan to conduct for design verification?</li>
+</ul>
+<h3 id="question-1-simulation-or-prototyping">Question 1: Simulation or prototyping?</h3>
+<p>Simulation can be interpreted as numerical experiments, which rely on the applications of engineering knowledge and scientific principles to evaluate the quality of the design solution. In practice, it is common to use software tools to support simulation activities (e.g., EnergyPlus for HVAC systems and Simulink for control systems).</p>
+<p>While simulation is often applied to time-based dynamic systems (i.e., how things change over time), the notion of "numerical experiments" can also be applied to other types of numerical analysis. For example, life-cycle analysis (LCA) can be used to examine the carbon emission (or other environment impacts) from the design solution. Finite-element
+analysis (FEA) can be used to examine the structural integrity of a physical construct.</p>
+<p>In design verification, prototyping can be referred to the use of physical prototypes to evaluate the quality of the design solution. Physical prototype is often perceived as a "golden standard" in design as it stands for a real object to be operated in the physical world. However, building a physical prototype requires a good amount of time and effort. The design team should be mindful to the verification purpose when they plan to build their physical prototype.</p>
+<p>Table 1 summarizes the pros and cons of simulation and prototyping. Apparently, it depends on the project's context and goal to decide on which approach to use for design verification. Generally, simulation is cheaper and safer, and thus it can support the investigation of "what-if" scenarios more promptly. On the other side, prototyping can
+provide empirical results (usually perceived as more "authentic") related to the physical world, but it tends to take more time and effort to develop.</p>
+<p>Table 1. Comparison of simulation and prototyping</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simulation</td>
+<td>- Less effort, more economical <br>- Flexible on resources <br>- Allow more testing scenarios <br>- Chance to learn simulation software tools</td>
+<td>- Less “authentic” results, which are based on theories and principles <br>- Numerical models cannot capture all empirical factors</td>
+</tr>
+<tr>
+<td>Prototyping</td>
+<td>- Empirical results that are valuable in view of “real world” performance <br>- Hands-on experience for managing and building stuff</td>
+<td>- Resource-intensive (e.g., material cost, equipment) and time-consuming <br>- Need to coordinate with others to access resources</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example: HVAC design</p>
+<p>While it is expected to use building energy simulation as the major approach in design verification, the simulation results are considered appropriate if they are within 10% errors of the "real results". Since building operations are subject to several uncertain factors (e.g., weather, occupancy), the "real results" from empirical data change very often.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: snow removal design</p>
+<p>While we can simulate the autonomous function on a computer screen, the perception of trustworthiness of the design outcome is not equivalent to demonstrations through physical prototypes.</p>
+</div>
+<h3 id="question-2-what-to-consider-when-planning-for-prototyping">Question 2: What to consider when planning for prototyping?</h3>
+<p>The most important consideration is to evaluate whether the design team can secure the required resources and have enough time to develop physical prototypes. In this aspect, capstone projects are not different from design projects in companies. Even a company has certain resources (e.g., materials, equipment, lab facility) that can support design work,
+it does not mean that those resources are freely available for the design team whenever they want. The design team is expected to have good communication and management skills to work with relevant stakeholders and plan for the prototyping process.</p>
+<p>In prototyping, one common question is how to get the parts or sub-systems for the physical prototype. Typically, we can have three approaches.</p>
+<ul>
+<li>Buy the parts from the market.<ul>
+<li>Off-the-shelf parts usually have reasonable quality, and the design team can save the making effort. Need to pay attention of the lead
+time between ordering and arrival.</li>
+</ul>
+</li>
+<li>Make the parts by the design team.<ul>
+<li>The design team can have more flexibility to customize the parts, and they can gain hands-on experience. Craftmanship may be needed, and it usually takes more time and effort.</li>
+</ul>
+</li>
+<li>Outsource the making of the parts to a machine shop.<ul>
+<li>The design team can access more prototyping resources and professionals. How to communicate the fabrication requirements can be challenging. Also, need to pay attention to the lead time.</li>
+</ul>
+</li>
+</ul>
+<p>The use of 3D printing is also so common in practice. Generally, 3D printing can support the design team to get physical parts rapidly and economically, and thus it can support design iterations, where designers can try and improve different design ideas. When considering the use of 3D printing, we can keep the following notes in mind.</p>
+<ul>
+<li>3D-made parts are often restricted to certain materials. They are good to demonstrate the form-and-fit type of functions but not good for the design aspects related to material strength.</li>
+<li>They are also limited by dimensional accuracy (related to tolerance in mechanical design) and the quality of surface finishing.</li>
+<li>If the same component can be made by 3D printing or purchased through stock parts, it is often better to simply use stock parts.</li>
+</ul>
+<p>To some design teams, prototyping is attractive because it can enrich hands-on learning experience, and finished prototypes can clearly demonstrate design intelligence and effort. Yet, in engineering practice, we do not develop prototypes merely for the show-and-tell reason. Instead, we make prototypes to serve the design verification purpose. That is, if there is no apparent reason for design verification, the design team should re-consider whether they should proceed to making physical prototypes.</p>
+<p>In prototyping, it is common to have a gap between what the design team wants and what the reality can offer. For example, a resource is anticipated to support prototyping or physical testing, but it becomes unavailable when needed. While this situation is unfortunate, keep in mind that physical prototypes are only a means to design verification,
+and they are not the only means. The design team can still be flexible to consider other available resources and adjust the plan for design verification.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: HVAC design (fall short of the expectation)</p>
+<p>The design team has a chance to receive a heat-recovery device donated by a company. After some planning, the design team decides to run physical experiments with the device as part of their design work. However, the delivery of the device is delayed so that the original plan cannot be conducted before the end of the semester. The design team can still document their preparation work (e.g., design of instrumentations and execution plans) so that another design team can continue the work.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Snow removal design (priority in prototyping)</p>
+<p>As the snow removal function is essential, the design team aims to develop a physical prototype for this function alone with wired electricity and control. At the same time, another prototype is built to examine the autonomous function.</p>
+</div>
+<h3 id="question-3-how-many-tests-for-design-verification">Question 3: How many tests for design verification?</h3>
+<p>When we do design testing, we want to inform how well the proposed design solution is working. We can classify three types of design testing.</p>
+<p><em>Type 1: Verify the design specifications</em></p>
+<p>While design specifications are set at the earlier time, it is good to verify if the design solution truly meets these specifications. Generally, we do not need to check all specifications but only the key ones.</p>
+<p><em>Type 2: Examine the design functions</em></p>
+<p>This can be done by demonstrations. We want to check if the design solution works as intended in various conditions.</p>
+<p><em>Type 3: Measure the performance metrics</em></p>
+<p>Beyond "simply working", we should check how well the design is working. This aspect can be examined by measuring the performance metrics of the prototype.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: HVAC design</p>
+<p>The design team can organize these three types of testing as follows.</p>
+<ul>
+<li>Testing type 1: Specifications<ul>
+<li>Check if the design is below the specified budget or initial cost.</li>
+</ul>
+</li>
+<li>Testing type 2: Functions<ul>
+<li>Check (via simulation) how the heat pump works under normal winter conditions.</li>
+<li>Check (via simulation) how the heating system works under extreme cold conditions.</li>
+</ul>
+</li>
+<li>Testing type 3: Performance metrics<ul>
+<li>Check (via simulation) the energy use intensity (EUI).</li>
+<li>Check (via simulation) the annual carbon emissions.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Snow removal design</p>
+<p>The design team can organize these three types of testing as follows.</p>
+<ul>
+<li>Testing type 1: Specifications<ul>
+<li>Check if the weight of the device is below the specified value.</li>
+</ul>
+</li>
+<li>Testing type 2: Functions<ul>
+<li>Check (via physical testing) how the device removes snow under normal snow conditions.</li>
+<li>Check (via physical testing) how the device achieves several autonomous tasks.</li>
+</ul>
+</li>
+<li>Testing type 3: Performance metrics<ul>
+<li>Check (via physical testing) the efficiency and effectiveness of snow removal tasks.</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>For good practices in design verification, we often need to "repeat" tests to address two types of variability: (1) operating conditions and (2) randomness. Operating conditions are referred to the environmental parameters under which the design solution is operated. They can be applied to the cases of simulation and physical testing. In contrast, randomness is referred to uncontrollable variations of the outcomes from testing, and it is mostly relevant to physical testing<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> in the context of capstone design projects.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: HVAC design (operating conditions)</p>
+<p>Building energy simulation usually takes the weather data of a "typical year" which can generate the results for typical situations. In the simulation study, the design team defines the following less-typical operating conditions to examine the performance of the HVAC design.</p>
+<ul>
+<li>Extreme cold conditions: Check the heating function under the extreme conditions, as well as the energy performance.</li>
+<li>Low-occupancy conditions: The building is not always full of occupants. The design team may want to examine one energy saving measure during the low-occupancy conditions.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Snow removal design (operating conditions and randomness)</p>
+<p>The design team plans to test the snow removal function. Since it is difficult to control the snow conditions, the design team gets a flat surface (5m × 5m), on which they can put artificial snow. The snow removal device can be tested on this flat surface. Two operating conditions can be defined as follows.</p>
+<ul>
+<li>3-cm snow condition: Considered as a typical scenario, the design team checks the time for the device to remove snow. The snow removal task will be repeated for three times to examine the variation of the outcomes (i.e., related to randomness).</li>
+<li>10-cm snow condition. Considered as an extreme scenario, the design team wants to check whether the device can remove this amount of snow. The task will not be repeated (i.e., a type of stress test without considering repeatability and randomness).</li>
+</ul>
+</div>
+<p>In response to the question "how many tests?", it depends on how many operating conditions and how many repeated tests to examine randomness that the design team wants to work on. Since possible numbers of tests can be numerous, the design team should be careful in defining what tests should be considered for their design verification purpose.</p>
+<h2 id="46-interpret-the-test-results-task-3">4.6: Interpret the test results (Task 3)</h2>
+<p>After executing the test plan, we will have a set of data as test results. The test results will not speak for their own "naturally" in response to the verification inquiry (e.g., how well the design solution performs). For checking the specifications and design functions, the analysis and interpretation can be as straightforward as indicating the Yes/No answer (e.g., can the HVAC system offer enough heat during extreme cold conditions and can the snow removal device remove 3-cm snow). If the list of specifications and design functions is long, the design team can use a table to organize the information.</p>
+<p>The performance metrics of the design solution can be analyzed and compared in three different situations.</p>
+<ul>
+<li>When the tests have been run under various operating conditions, the design team can compare the test results across different operating conditions.</li>
+<li>Compare the test results with some benchmarks that express the typical performance of similar existing designs.</li>
+<li>In view of randomness, the design team can report the range (or standard deviation) of performance under repeated tests (or experiments).</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example: HVAC design (benchmarking)</p>
+<p>For the metric of energy use intensity (EUI), the design team can compare its result with the national EUI benchmark and justify whether the HVAC design is more energy efficient. The design team can compare the percentage of increase of EUI in the "normal conditions" (heat pump efficiency involved) and the "extreme conditions" (heat pump efficiency removed).</p>
+<p>Concerning carbon emissions, the design team can analyze a "conventional" HVAC system and obtain its values of carbon emission as a benchmark. Then, the design team can compare how much carbon emission can be reduced from their proposed HVAC system.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Snow removal example (benchmarking and variation)</p>
+<p>Suppose that the design team uses time to measure the efficiency of a preset snow removal task. While there is no similar device on the market, one benchmark is to experiment how much time a typical person would take to do the same snow removal task. Then, the design team can indicate how much efficient of their design solution to remove snow as compared to human operators.</p>
+<p>Concerning variations, the design team can repeat the snow removal task three times and report the longest and shortest times. It can inform that the stability of the design's performance. In addition, the design team can compare the times between the standard task (3-cm snow) and the stress-test task (10-cm snow). It can inform how well the snow removal device performs under various depths of snow.</p>
+</div>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>We can examine the effects of randomness via simulation (e.g., Monte Carlo simulation), but it is not common in the scope of capstone projects.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Simon Li
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "navigation.sections", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

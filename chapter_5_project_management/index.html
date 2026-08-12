@@ -1,0 +1,979 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../chapter_4_design_verification/">
+      
+      
+        <link rel="next" href="../chapter_6_design_communication/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>5. Project Management - Capstone Design Guidebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-5-project-management-and-teamwork" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Capstone Design Guidebook" class="md-header__button md-logo" aria-label="Capstone Design Guidebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Capstone Design Guidebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              5. Project Management
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Capstone Design Guidebook" class="md-nav__button md-logo" aria-label="Capstone Design Guidebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Capstone Design Guidebook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_1_introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_2_conceptual_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Conceptual Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_3_design_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Design Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_4_design_verification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Design Verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Project Management
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Project Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51-project-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Project scheduling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-team-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Team dynamics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Team dynamics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-up-the-expectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set up the expectation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recognize-the-contributions-of-individual-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recognize the contributions of individual members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appreciate-different-types-of-team-players" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appreciate different types of team players
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-and-detect-the-free-rider-earlier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand and detect the free rider earlier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distinguish-friendship-and-working-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distinguish friendship and working relationship
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-managing-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3: Managing meetings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-stakeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4: Stakeholders
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4: Stakeholders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typical-concerns-of-stakeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typical concerns of stakeholders
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-project-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5: Project resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_6_design_communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Design Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#51-project-scheduling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Project scheduling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-team-dynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Team dynamics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Team dynamics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#set-up-the-expectation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Set up the expectation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recognize-the-contributions-of-individual-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recognize the contributions of individual members
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appreciate-different-types-of-team-players" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Appreciate different types of team players
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-and-detect-the-free-rider-earlier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand and detect the free rider earlier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distinguish-friendship-and-working-relationship" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distinguish friendship and working relationship
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-managing-meetings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3: Managing meetings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-stakeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4: Stakeholders
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4: Stakeholders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#typical-concerns-of-stakeholders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typical concerns of stakeholders
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-project-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5: Project resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-5-project-management-and-teamwork">Chapter 5: Project Management and Teamwork</h1>
+<p>The course work of capstone design is delivered in a "project" format. In practices, engineering work is often delivered in terms of projects. Thus, the project experience from capstone design can be relevant to engineering career development. At the same time, due to the academic settings, capstone design projects have some unique elements, which make them different from industry projects. Some unique elements are explained as follows.</p>
+<ul>
+<li>Fixed time period. Capstone projects must be conducted and completed in two school semesters (about 7-8 months). While industry projects also have start and end dates, they are not as rigid as the school schedules and can be changed (e.g., project delay).</li>
+<li>Grading elements. Capstone projects need to be graded as part of the academic duty for regular course work. In contrast, we do not have grading in industry. The transaction nature of grading can shift the focus from the need of the project to the requirements of assessments.</li>
+<li>Power structure. The power structure in a company is often clear (e.g., high admin, project manager, engineer-in-training), and it often indicates the individual roles in project delivery. In contrast, students in a capstone team need to define their roles, and we do not have effective mechanisms (which are common in companies) to regulate teamwork behaviours.</li>
+</ul>
+<p>Nevertheless, capstone projects can provide a low-stake opportunity for students to experience and develop project management skills. In the end, project management needs to manage three major elements: (1) time, (2) resources, and (3) people, which are common between capstone and industry projects. Skills and insights towards the management of these three elements can be helpful for students in their engineering careers.</p>
+<h2 id="51-project-scheduling">5.1. Project scheduling</h2>
+<p>Time is a valuable resource. Project scheduling is about how to use time effectively for the completion of the project.</p>
+<p>In the context of capstone projects, we suggest the design team to think about the key milestones towards the completion of the design project. Listed below are few examples.</p>
+<ul>
+<li>Completion of a design concept (or tentative design solution) confirmed within the team and with stakeholders</li>
+<li>Completion of design details</li>
+<li>Completion of a physical prototype</li>
+<li>Completion of major analysis / verifications results</li>
+</ul>
+<p>Then, set the deadlines to these milestones. During the meetings, the design team should regularly assess how likely to meet the deadlines. It is a typical "deadline-control" strategy for project scheduling.</p>
+<p>In addition, meeting a milestone implies the completion of multiple tasks taken by various team members. For example, to complete a prototype, it may involve the following tasks.</p>
+<ul>
+<li>Acquisition of components</li>
+<li>Submission of jobs to the makerspace</li>
+<li>Assembly of the overall design</li>
+</ul>
+<p>A good project schedule should cover the major tasks to achieve the milestone, as well as the team members who are responsible for these tasks. Note that the breakdown of these tasks needs not to be very detailed. It should be practical for the whole team to track the progress rather than micro-managing how people do things.</p>
+<p>In a real world, things do not often happen as planned and scheduled. We should not be surprised if the design team needs to modify the original schedule due to unexpected events. Notably, good project management does not mean that we should keep the original plan or avoid unexpected events as much as possible. Instead, we can develop some sense of risk management by asking questions like "what happens if some tasks cannot be delivered".</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>A design team may want to order a critical component (e.g., a motor for a mobilized device) from an online retailer, and it involves international shipment. In the capstone's context, this purchase cab be high risk if the shipment may take 1-2 months. Accordingly, the design team should think of some contingency plan. For example, borrow some basic motor and make a scale model, which can show the basic functions of the design and be used for some design testing.</p>
+</div>
+<p>Since capstone projects are often shorter (consider that students are not working full time) and less complex than industrial projects, specialized or commercial project management (PM) tools are not necessary. On the one hand, it is good for the design team to explore and practice some PM tools such as Gantt chart and work breakdown structure in a capstone project. On the other hand, it is proper if the design team just uses simple tools (e.g., Word and Excel), as long as they can effectively manage and communicate the PM information within the team and with the stakeholders.</p>
+<h2 id="52-team-dynamics">5.2. Team dynamics</h2>
+<p>Team dynamics is a real issue in capstone design projects. In academic settings and business consultation, there are several topics related to dynamics such as the five stages of team formation (i.e., forming, storming, norming, performing and adjourning) and conflict resolutions (e.g., types of conflicts and confrontation strategies). While these topics are good, we want to share five notes that are specific to the context of capstone projects.</p>
+<h3 id="set-up-the-expectation">Set up the expectation</h3>
+<p>Conflicts can easily arise if Adam plans to spend 2 hours per week, while Betty plans 10 hours for the capstone project. A team charter can be an effective tool for the design team to align the expectations of the team members. Examples of expectations include the following:</p>
+<ul>
+<li>Average weekly hours to be spent to the capstone project</li>
+<li>Attendance to the team meetings</li>
+<li>Expected time to respond to internal communications</li>
+</ul>
+<h3 id="recognize-the-contributions-of-individual-members">Recognize the contributions of individual members</h3>
+<p>Teamwork does not mean that everyone in the design team does the same thing. For example, while teamwork is common in workplace, employees are still recognized per their own contributions to projects and to the company. Each team member needs to identify how they plan to contribute to the project work and discuss it with the whole team.</p>
+<h3 id="appreciate-different-types-of-team-players">Appreciate different types of team players</h3>
+<p>Individual team members have their own personal characters, experiences, and expectations, thus forming different types of team players. We do not need a role model of an ideal team player and smooth out individual differences. Instead, we can try to understand and appreciate how different people work differently. Per our experience, we can describe six different types of team players.</p>
+<ul>
+<li><strong>Type 1: Scheduler.</strong> Design is about executing the details (e.g., sensitive to deadlines and coursework requirements). While they are good at management and information control, they can be perceived as being "too strict" and not flexible enough to seek for alternate pathways when facing obstacles.</li>
+<li><strong>Type 2: Maker.</strong> Design is about getting the job done (e.g., "just do it" can be their slogan). While they can make design progress, they tend to trivialize the design problem and overlook the real needs.</li>
+<li><strong>Type 3: Calculator.</strong> Design is about applying good scientific knowledge (e.g., emphasizing the need of certain theories and numerical analyses in design). While they can situate the design problem in a scientific context, they can confuse the correctness of scientific analysis with the effectiveness of design solutions.</li>
+<li><strong>Type 4: Creator.</strong> Design is about innovating novel ideas (e.g., sharing different ideas with excitement in discussions). While there is nothing "wrong" about creativity and innovation in design, they can overlook the project practicality and engineering convention.</li>
+<li><strong>Type 5: Cheerleader.</strong> Design is about working out something together (e.g., sensitive to the mood of team dynamics and want to bring up the team spirit). While they can smooth out team tensions and conflicts, they tend to "forgive" slips and may promote unfairness.</li>
+<li><strong>Type 6: Communicator.</strong> Design is about sharing design ideas (e.g., how to engage audience in design communications). While design solutions cannot be well received without good communications, they may perceive that good pitches are important than engineering work.</li>
+</ul>
+<p>There is no one type of team players more important other types in capstone projects. It is also rare to find a teammate who belongs to a pure type of team player. For example, I can be 70% Maker and 30% Cheerleader. As discussed, different types of team players can contribute to design projects in different ways, and they can also come with potential blind spots and weaknesses. Thus, one essence of teamwork is about supporting individual strengths and reducing weaknesses to be reflected at the project level.</p>
+<p>For example, suppose that I am a mix of Calculator and Scheduler, and I tend to be very quiet in meetings but paying attention to discussion details. At the same time, I can be critical and easily become negative to some undesirable situation. Then, a Cheerleader can help me (and also the design team) to stay positive and find alternate solutions. Here,
+the message is to recognize the strengths of others and understand (and help) our potential "negative" sides.</p>
+<p>In the end, teamwork is not about being a nice (or accommodating) person. It is about letting each team member identify their role, contribute their strengths and cover weaknesses of each other.</p>
+<h3 id="understand-and-detect-the-free-rider-earlier">Understand and detect the free rider earlier</h3>
+<p>Free riders in teamwork are a real issue in practice. They can easily cause the concern of fairness and ruin the team dynamics. The reality is that free riders would not declare themselves as free riders at the beginning, and teams could only identify the issue until late at some "stressful" time (e.g., one week before a major deadline). In this context, one relevant teamwork skill is how to identify free riders without being too late.</p>
+<p>Human behaviours are sticky and would not change easily over the time. If we identify the following behaviours, it is likely an indication of free riders.</p>
+<ul>
+<li><strong>Miss meetings frequently.</strong> Time commitment is often a clear indication. If a person cannot commit to the scheduled meetings, they cannot commit to the project. The observation can go beyond attendance. For example, being late (e.g., always join only the second half of the meetings) and not paying attention (e.g., checking smartphones more than talking to the team) are also negative indications.</li>
+<li><strong>Makes promises and then excuses.</strong> I do not want to frame this situation as "lying", as some people are simply unable to regulate and connect their intention and actions effectively. When such situation happens once, the chance of repeating the situations is high.</li>
+</ul>
+<p>We do not intend the design team to handle the free-rider issue on their own. It is always better if the design team can report the free-rider concern earlier. Instructors can have some measures to address the issue. Then, how early should we report the free-rider issue? Consider that the capstone project starts in early September. In the first month, the design team should have met several times for project planning. Some technical design work should have begun in the second month. Then, the meeting commitment and the quality of initial technical work (e.g., background research) should have provided some evidence about the free-rider concern. In other words, around from mid October to mid
+November, the design team may already have some sense of the free-rider concern. Then, the design team does not need to make a "verdict" about who is the free rider. They can simply bring in their concern to the instructor.</p>
+<p>It is understandable that the free-rider concern is not a clearcut issue, and there can be a spectrum of "slackness" (e.g., being lazy but not entirely a free rider). Some team management techniques can help mitigating the issue. First, set up the expectation (e.g., team charter). Some people simply do not know the expected level of effort in
+a capstone project. Second, focus on fair individual contributions. As discussions of behaviours (e.g., attending a meeting unprepared) can be vague, we can focus the discussions on tangible contributions or project outcomes, which can help the design team and the instructor to assess the situation more objectively.</p>
+<h3 id="distinguish-friendship-and-working-relationship">Distinguish friendship and working relationship</h3>
+<p>We do not need to be friends in order to work in the same team. This is especially true in workplace. Notably, we can develop friendship in capstone projects, and it is a good thing to happen. However, friendship implies certain emotional burdens, which can make project management difficult. For example, a friend of mine does not deliver a proper quality of design work, and our friendship can make me feel difficult to express the issue.</p>
+<p>Focusing on working relationship can make the project management work easier. Friendship implies personality and emotion. In working relationship, we can simply focus on the work (e.g., meeting deadlines, assessing work quality), and any discussions should not be strongly tied to personality and emotion (which are more difficult to handle).</p>
+<p>To clarify as an ending note, humans have personality and emotion, which we cannot avoid completely in teamwork. Also, it is evident that people can grow friendship from their working and professional relationship. However, how to handle friendship and working relationship properly requires experience and certain maturity. For students, the first step is to at least make a distinction between the two.</p>
+<h2 id="53-managing-meetings">5.3: Managing meetings</h2>
+<p>Meetings are an important element in project management. In capstone project, there can be four types of meetings (listed below). The design team should be aware of the purposes of different meetings and coordinate accordingly.</p>
+<ul>
+<li>Meetings among team members. Such meetings allow team members to share and update their own design work and track the overall design progress. Generally, we suggest the design team to identify a fixed pattern for team meetings (e.g., every Tuesday from 6-7pm) in order to develop a work pattern.</li>
+<li>Meetings with sponsors. At the beginning, the design team needs to meet the sponsor (as the problem provider) and clarify the project requirements. As a professional practice, the design team is also responsible to update the design progress regularly with the sponsor. For some important decision (e.g., acceptance of a tentative design idea), setting up a meeting with the sponsor can be effective in communications.</li>
+<li>Meetings with the course instructor / teaching assistant. While the course requirements would require the design team to meet the instructor and/or teaching assistant regularly, the design team can also meet them for specific topics or updates.</li>
+<li>Meetings with technicians and technical supports. Sometimes the design team may need to meet technical staff to discuss the technical requirements of their project (e.g., access to makerspace resources).</li>
+</ul>
+<p>The design team should perceive themselves as the "host" of the meetings. In this sense, the design team can consider the following tasks for each meeting.</p>
+<ul>
+<li>Define the purpose of a meeting.</li>
+<li>Schedule the meeting's time and place and inform the attendees. Record the attendance after the meeting.</li>
+<li>Prepare an agenda to control the flow and outcomes of a meeting.</li>
+<li>Prepare a minute after a meeting to document the main decisions and action items.</li>
+</ul>
+<p>The "formality" of a meeting can vary. Typically, meetings among team members can be less formal. There are few reminding points for this type of meetings.</p>
+<ul>
+<li>Distinguish meetings vs. group activities. Meetings should be mainly about informed discussions and decision making.<ul>
+<li>Examples of group activities include building a prototype and having a pizza dinner, which formats can vary and be less formal.</li>
+</ul>
+</li>
+<li>Keep each meeting less than an hour. A longer meeting is usually not effective.</li>
+<li>Track the action items and responsibilities.</li>
+<li>Prepare the work before a meeting rather than doing the work during a meeting.</li>
+</ul>
+<p>Meetings with people outside of the design team should be more formal. When scheduling a meeting, we expect that people could take three days to respond. Thus, scheduling a meeting to take place within a week is considered "rush" (of course, situations may vary according to the context).</p>
+<h2 id="54-stakeholders">5.4: Stakeholders</h2>
+<p>Stakeholders can be generally referred to as any persons who are involved in the design process or may be influenced by design results. In capstone projects, there can be five types of stakeholders: (1) student, (2) sponsor, (3) academic advisor, (4) instructor / teaching assistant, and (5) technical supports. To properly interpret the roles of different stakeholders, we need to keep in mind that the primary goal of capstone projects is educational, and this makes capstone projects different from industrial projects.</p>
+<blockquote>
+<p><strong>Stakeholder 1: Student</strong></p>
+</blockquote>
+<p>Students form the design team, and they are responsible for executing the capstone design projects. Upon completion of design projects and fulfillment of course requirements, they will receive the course credits to complete their engineering degrees. In other words, the roles of students can be interpreted from two positions: students-as-problem-solvers and students-as-course-takers. While these positions are not contradictory (and very often complementary), students-as-course-takers is primary to protect the educational aim of capstone projects.</p>
+<blockquote>
+<p><strong>Stakeholder 2: Sponsor</strong></p>
+</blockquote>
+<p>In capstone projects, we generally define sponsors as "problem providers". This definition is somewhat unusual because we often associate sponsors with financial supports. Notably, the definition of sponsors-as-problem-providers does not eliminate the possibility of financial supports; it just does not make it mandatory. In practice, financial supports often imply obligations. The operational mechanisms of capstone projects are built upon the structure of credit courses, where we cannot provide effective oversights to finance-related obligations. Thus, we do not connect the role of sponsors with financial supports by default.</p>
+<p>In capstone projects, there can be three types of sponsors:</p>
+<ul>
+<li>Type 1: Sponsors who are external to the university. Examples include companies, non-profit organizations, and individual entrepreneurs. This type of sponsors provides real-world problems and looks for practical solutions.<ul>
+<li>They are not necessarily engineers or technical persons (i.e., stakeholders are merely problem providers). For non-technical stakeholders, student teams need to pay extra attention to identify the true needs of the design problem.</li>
+</ul>
+</li>
+<li>Type 2: Sponsors who are internal to the university. Examples include professors and staff. Professors tend to provide problems related to their research. University staff can have design problems related to our university community.</li>
+<li>Type 3: Students who propose their own capstone projects. It includes design projects from student clubs.</li>
+</ul>
+<p>For the educational purpose, while sponsors can certainly provide guidance for the design work, we expect students to take the "driver's seat" in conducting the capstone projects. To keep this intent, we generally do not grant the "grading power" to the sponsors (except, for example, when students make such request).</p>
+<blockquote>
+<p><strong>Stakeholder 3: Academic advisor</strong></p>
+</blockquote>
+<p>Academic advisors are faculty members, who provide an oversight to individual capstone projects. Normally, academic advisors are the experts to the subject matters that are related to the capstone projects. They are intended to maintain the academic standards associated to capstone projects. In this context, academic advisors have the grading power.</p>
+<blockquote>
+<p><strong>Stakeholder 4: Instructor and teaching assistant</strong></p>
+</blockquote>
+<p>Instructors and teaching assistants form an instructional team, and they are responsible for coordinating the coursework activities. Consider a capstone class with 20 design teams (about 100 students). There can be one instructor and four teaching assistants, and each academic advisor may supervise one or two capstone projects. Since all capstone projects
+are different, one duty of the instructional team is to maintain a reasonable level of consistency in course requirements and assessments. For this reason, instructors and teaching assistants have the grading power.</p>
+<p>Traditionally, teaching assistants (TA) support students in terms of technical skills and knowledge in regular courses. In capstone projects, since we already have sponsors and academic sponsors, we can frame the duty of TA as project managers. For example, each TA can be a manager of five capstone teams, where they can build a better understanding of who is doing what in each capstone project. TA-as-project-managers can provide graduate students some training in teamwork and project management, which are important future skills.</p>
+<blockquote>
+<p><strong>Stakeholder 5: Technical supports</strong></p>
+</blockquote>
+<p>Technical supports are mainly referred to the staff from the makerspace, machine shop and engineering store. Practically, these technical staff have seen and supported many capstone designs in the past. It is always to seek for their feedback on the quality and feasibility of design ideas and prototypes.</p>
+<h3 id="typical-concerns-of-stakeholders">Typical concerns of stakeholders</h3>
+<p>Stakeholders typically have their own concerns with capstone projects. We summarize their general concerns in the following list. By understanding their concerns, the design team can better communicate with them and get their supports effectively.</p>
+<blockquote>
+<p><strong>Concerns of Student</strong></p>
+</blockquote>
+<ul>
+<li>How will the course be assessed?</li>
+<li>What grade will I expect to receive?</li>
+<li>How much effort would I put in the project?</li>
+<li>How about others?</li>
+<li>Can I get along with my teammate?</li>
+</ul>
+<blockquote>
+<p><strong>Concerns of Sponsor</strong></p>
+</blockquote>
+<ul>
+<li>Can the design team deliver the design that can truly solve the problem?</li>
+<li>How much time do I need to spend with students and also for other activities?</li>
+</ul>
+<blockquote>
+<p><strong>Concerns of Academic Sponsor</strong></p>
+</blockquote>
+<ul>
+<li>How much time and effort do I need to commit to supervise the (assigned) capstone project?</li>
+<li>How can I know the work of students effectively?</li>
+<li>Does the design team demonstrate professionalism or require close supervision?</li>
+</ul>
+<blockquote>
+<p><strong>Concerns of Instructor and TA</strong></p>
+</blockquote>
+<ul>
+<li>Does the team carry the design project in a reasonable pace?</li>
+<li>Any perceived delay and challenge?</li>
+<li>Do all the team members contribute fairly to the project? With good team dynamics?</li>
+</ul>
+<blockquote>
+<p><strong>Concerns of Technical Support</strong></p>
+</blockquote>
+<ul>
+<li>What resources (e.g. materials, machine requirements, machining hours) will be required in the project?</li>
+<li>Can the resources be used efficiently with fairness among teams?</li>
+<li>Can we deliver services safe and in reasonable times?</li>
+</ul>
+<h2 id="55-project-resources">5.5: Project resources</h2>
+<p>Resources for capstone projects can be generally classified into two types: knowledge and prototyping support. Knowledge in a university can be accessed through the library and the domain experts. Nowadays, library is not only about books. A lot of paid contents (e.g., videos and journals) can be accessed through our university library. Also, the design team can book an appointment with a librarian on the guidance of doing research on a particular topic (e.g., background research of bicycle design).</p>
+<p>Domain experts can be generally referred to the professors in a university. Of course, technicians and other staff can have a lot of experience with capstone projects. As a general message, besides the academic advisor of the project, the design team can practically ask questions to anyone in the university, and they are encouraged to do so.</p>
+<p>Regarding prototyping support, they can be "hardware" (e.g., from fabrication materials to specialized components), "software" (e.g., SolidWorks and Simulink), and services (e.g., makerspace and machine shop).</p>
+<p>Capstone design projects often require various kinds of resources. As a practice of project management, when the design team is developing their design solution, they should also develop some (rough) budget to indicate how much resources will be required in the project. It is important for stakeholders to track the project's progress and feasibility.</p>
+<p>By concluding the project, the design team should also list and discuss the incurred expenses. Notably, expenses can be expressed in various units such as dollars (most common), machine shop hours and consultation hours. In practice, the staff hours are "real cost" to the company (or to the university in our case). By listing these hours can better realize the real cost of the project (which can be much more than the material cost of the prototype).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Simon Li
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "navigation.sections", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
