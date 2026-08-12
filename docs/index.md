@@ -1,6 +1,6 @@
 # Welcome!
 
-Welcome to this document site: Capstone Design Guide. Hello Na!
+Welcome to this document site: Capstone Design Guide. Hello Na! Na!
 
 The purpose of this Guide is to support engineering students to work on their capstone design projects. Our support primarily aims to answer one question: **What should students do in a capstone design project?**
 
