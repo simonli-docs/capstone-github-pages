@@ -53,9 +53,9 @@ It is related to the cost of making design changes. During the conceptual design
 
 ## 2.3: What tasks should I do in conceptual design?
 
-Conceptual design is abstract, and thus it is not clear what tasks the design team should work on in this design stage. Traditional design textbooks provide various advice and methods to support concept generation (e.g., morphological chart) and concept selection (e.g., decision matrix). These are good content, which can be considered as "knowledge inventory" (see Figure 1.6 in Chapter 1) for capstone design work.
+Conceptual design is abstract, and thus it is not clear what tasks the design team should work on in this design stage. Traditional design textbooks provide various advice and methods to support concept generation (e.g., morphological chart) and concept selection (e.g., decision matrix). These are good content, which can be considered as "knowledge inventory" (see Figure 6 in [Chapter 1.4](/chapter_1_introduction/#14-cognitive-design-tasks)) for capstone design work.
 
-We can further consider the conceptual design work in view of cognitive design tasks (see Section 1.4 in Chapter 1). Instead of prescribing procedures for design activities, designers need to make sense of the given design problem and formulate design tasks that can contribute to the resolution of the design problem. Corresponding to five types of
+We can further consider the conceptual design work in view of [cognitive design tasks](/chapter_1_introduction/#14-cognitive-design-tasks). Instead of prescribing procedures for design activities, designers need to make sense of the given design problem and formulate design tasks that can contribute to the resolution of the design problem. Corresponding to five types of
 cognitive design tasks, five specific tasks for conceptual design are suggested, and their conceptual relationships are illustrated in Figure 1 below. After the high-level introduction below, these tasks will be further explained in subsequent sections.
 
 ![Figure 2.1. Five cognitive design tasks in conceptual design](./images/figure_2_1.png)
@@ -84,8 +84,7 @@ Some design decisions can directly impact how the design team is going to develo
 
 ## 2.4: Refine the problem statement (Task 1)
 
-Conceptual design typically starts with a brief description of the problem. In practice, such problem description can be incomplete and even misleading because the problem providers (e.g., project sponsors, clients) may not know exactly what they want at the beginning. Then, the purpose of Task 1 is to refine the problem statement that fits the scope
-of the timeline, the skillsets of team members and the available resources.
+Conceptual design typically starts with a brief description of the problem. In practice, such problem description can be incomplete and even misleading because the problem providers (e.g., project sponsors, clients) may not know exactly what they want at the beginning. Then, the purpose of Task 1 is to refine the problem statement that fits the scope of the timeline, the skillsets of team members and the available resources.
 
 A good problem statement can help the design to stay on track and make meaningful deliverables in the end. It is [the duty of the design team]{.underline} to refine the problem statement for their design project. This task is difficult, and we expect some continuing revisions of the problem statement (e.g., the design team can modify the problem statement in the middle of the design process).
 
@@ -112,8 +111,7 @@ In the snow removal example, while we may see the innovation's value of the desi
 
 - What is the maximum capacity of snow removal?
 
-While there is no "standard answer" for "perfect" problem statements, we can review the quality of the problem statement in two aspects. First, can the problem statement communicate the design motivation appropriately (e.g., why do we need a new design, can some existing design solve the same problem)? Design motivation reveals the original
-intent of the design problem, and the original intent is a powerful piece of information to facilitate common understanding among the project sponsors, the design teams and other stakeholders.
+While there is no "standard answer" for "perfect" problem statements, we can review the quality of the problem statement in two aspects. First, can the problem statement communicate the design motivation appropriately (e.g., why do we need a new design, can some existing design solve the same problem)? Design motivation reveals the original intent of the design problem, and the original intent is a powerful piece of information to facilitate common understanding among the project sponsors, the design teams and other stakeholders.
 
 Second, can the problem statement communicate the project's scope (or goals) effectively (e.g., what are the desirable features of a successful design, what are the expected deliverables)? This aspect is related to project management. Since capstone projects have a fixed duration, it is important to define clear project's goals and estimate the deliverables by the end of the project. It can also help the design team to stay focused on tangible outcomes from the project.
 

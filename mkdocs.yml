@@ -26,5 +26,7 @@ markdown_extensions:
   - pymdownx.superfences
   - footnotes
   - pymdownx.caret
+  - toc:
+      permalink: true
 
 copyright: Copyright &copy; 2026 Simon Li

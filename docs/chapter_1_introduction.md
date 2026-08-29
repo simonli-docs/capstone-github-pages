@@ -7,14 +7,14 @@
 
 Let us unpack this definition and explain each element.
 
-> **Design is a process.**
+### **Design is a process.**
 
 A design process has a start point and is expected to have an end point. Figure 1 illustrates a conception of a linear process. Starting with a design problem, a designer often needs to go through multiple stages before they complete a design solution.
 
 ![Figure 1. Conception of a linear process](./images/figure_1_1.png)
 _Figure 1. Conception of a linear process_
 
-> **Design process often proceeds iteratively rather than linearly.**
+### **Design process often proceeds iteratively rather than linearly.**
 
 Figure 2 illustrates an example. After Design Stage 1, the results are checked. Since the results are not "good enough," the designer needs to go back to Design Stage 1 to improve the results before proceeding to Design Stage 2.
 
@@ -24,13 +24,13 @@ _Figure 2. Conception of an iterative process_
 
 Design iteration is very common because we cannot predict the design outcomes with 100% accuracy. We often need to try out an idea, test it and then improve it. Thus, design iteration should not be perceived as a deficiency.
 
-Of course, uncontrolled and undisciplined design iteration is not good, as this practice can lead to undesirable design outcomes by the end of the design project. This aspect will be discussed in the section of project management.
+Of course, uncontrolled and undisciplined design iteration is not good, as this practice can lead to undesirable design outcomes by the end of the design project. This aspect will be discussed in the chapter of [project management](/chapter_5_project_management/#chapter-5-project-management-and-teamwork).
 
-> **Engineering design is about problem solving.**
+### **Engineering design is about problem solving.**
 
 In capstone projects, design problems are given by project sponsors (or clients). While these problems may not be clearly articulated initially, how well we can solve their problems is an important perspective for us to evaluate the quality of design solutions and the ability of designers.
 
-> **Engineering design involves scientific and engineering knowledge.**
+### **Engineering design involves scientific and engineering knowledge.**
 
 Scientific knowledge is associated with the content of natural, engineering, and mathematical sciences, which are considered as foundational knowledge for engineers (e.g., statics, calculus, electricity, chemical reactions, thermodynamics). Engineering knowledge can be associated with the content of engineering tools and practices (e.g., computer programming, 3D modeling, codes and standards, instrumentations, prototyping tools).
 
@@ -38,7 +38,7 @@ The involvement of scientific and engineering knowledge can effectively differen
 
 Under the "applied science" culture, it is often perceived that good technical skills and knowledge will lead to good design work. From our experience, it is not entirely true. A design team can list and explain a lot of technical content flawlessly without solving the given problem directly. Correct scientific and engineering knowledge is necessary but not most essential in the delivery of good design solutions.
 
-> **Design yields synthetic solution(s).**
+### **Design yields synthetic solution(s).**
 
 In engineering design, we can classify two types of solutions: analytical and synthetic. 
 
@@ -76,7 +76,7 @@ _Table 1. Examples of designed objects and related properties_
 
 Capstone design projects are referred to as final-year projects, from which students are expected to apply their knowledge and skills learned from their engineering programs and develop design solutions. Capstone design projects are intended to help students develop practical design skills for real-world engineering projects. To achieve this educational purpose, capstone design projects have some common features that are shared with real-world projects. Three common features are discussed below to explain how capstone projects are intended to support students to develop technical and professional skills.
 
-> **Feature 1: Capstone projects involve ill-defined problems.**
+### **Feature 1: Capstone projects involve ill-defined problems.**
 
 Ill-defined problems initially contain incomplete information for problem solving, where designers are expected to learn the initial problems through background research and discussions with clients (and/or end users). Designers often need to make assumptions so that they can work on decision-making and analysis problems. Ill-defined problems can be contrasted to well-defined textbook problems, which provide complete information (i.e., no need to make assumptions) and seek for "the correct" answers.
 
@@ -84,13 +84,13 @@ _Why are ill-defined problems common in engineering projects?_ There are at leas
 
 Second, while it sounds ironic, problem-providers may not know what they want exactly at the beginning, thus making the original problem statements ill-defined. Through background research and discussions, one duty of problem-solvers is to help problem-providers to refine the scope of the design work.
 
-> **Feature 2: Capstone projects require critical thinking.**
+### **Feature 2: Capstone projects require critical thinking.**
 
 Critical thinking controls how technical content should be applied in engineering and design work, and such skills are needed in both capstone and real-world projects. Suppose that I have learned different categories of engineering materials and their properties (technical content) from a technical course. Capstone projects can provide me an authentic context, from which I need to deliberate how to connect material properties to the design needs (or requirements). Further, after developing a design solution in a capstone project, critical thinking is also needed to verify how well the design solution would work.
 
 _Do we need critical thinking in professional practice?_ Absolutely. Engineering projects often face conflicting expectations (e.g., good-enough versus high-performing solutions) with a wide range of considerations (e.g., codes and standards, environmental and social aspects). Critical thinking is most needed for designers to navigate and develop design solutions in a complex world. Before facing these real-world challenges, capstone projects are expected to provide a reasonable level of complexity, from which students can practice and reflect on their critical thinking.
 
-> **Feature 3: Capstone projects offer practices in teamwork, technical communication, and project management.**
+### **Feature 3: Capstone projects offer practices in teamwork, technical communication, and project management.**
 
 The need for teamwork, technical communication, and project management is evident in engineering practice. An open question is how capstone projects can provide training on these professional skills. For teamwork, students are expected to work with their teammates and achieve a common project's goal. For technical communication, students are
 expected to communicate the design content to different types of audience such as academic advisors, industry sponsors, and potentially, the public. For project management, students need to define and follow their own project's timeline and keep track of the project's progress.
@@ -152,11 +152,9 @@ The purpose of design verification is to examine how well the design solution wo
 
 ## 1.4: Cognitive design tasks
 
-Cognitive design task can be perceived as a unit of design work, where designers focus on how to process information and yield outcomes meaningfully for a design project. For example, a designer can work a decision-making task to compare and select the snow removal mechanism (e.g., push versus scoop-and-throw). This decision-making task can be
-considered as one unit of work for this designer in the design project.
+Cognitive design task can be perceived as a unit of design work, where designers focus on how to process information and yield outcomes meaningfully for a design project. For example, a designer can work a decision-making task to compare and select the snow removal mechanism (e.g., push versus scoop-and-throw). This decision-making task can be considered as one unit of work for this designer in the design project.
 
-Engineering design is an information-intensive process. The purpose of cognitive design tasks is to decompose design activities into a set of tangible and workable tasks, where designers can focus on the input information and the expected outcomes. Figure 5 illustrates a sample structure of a cognitive design task of decision making, where the
-designer collects the information of (1) design options, (2) selection criteria, and (3) rating scheme, and the expected outcome is the selected option. Through the execution of cognitive design tasks, designers develop meaningful content for the design project.
+Engineering design is an information-intensive process. The purpose of cognitive design tasks is to decompose design activities into a set of tangible and workable tasks, where designers can focus on the input information and the expected outcomes. Figure 5 illustrates a sample structure of a cognitive design task of decision making, where the designer collects the information of (1) design options, (2) selection criteria, and (3) rating scheme, and the expected outcome is the selected option. Through the execution of cognitive design tasks, designers develop meaningful content for the design project.
 
 ![Figure 1.5. Information flow of a cognitive design task](./images/figure_1_5.png)
 
@@ -174,8 +172,7 @@ _Table 2: Five types of cognitive design tasks_
 | Decision making        | Formulate decision-making problems and make the final choice |
 | Scientific analysis    | Analyze design solutions with scientific properties |
 
-Combining the three design stages (Figure 4) and the five types of cognitive design tasks (Table 2), students can deliberate how to apply their knowledge meaningfully through cognitive design tasks and contribute to each design stage. Figure 6 provides a three-layer framework to illustrate this idea. The first layer outlines a design process of three design stages. In each design stage, designers can conduct different types of cognitive design tasks (second layer). Designers can utilize their knowledge inventory (third layer) to support
-the execution of cognitive design tasks.
+Combining the three design stages (Figure 4) and the five types of cognitive design tasks (Table 2), students can deliberate how to apply their knowledge meaningfully through cognitive design tasks and contribute to each design stage. Figure 6 provides a three-layer framework to illustrate this idea. The first layer outlines a design process of three design stages. In each design stage, designers can conduct different types of cognitive design tasks (second layer). Designers can utilize their knowledge inventory (third layer) to support the execution of cognitive design tasks.
 
 ![Figure 1.6. Cognitive design tasks and a three-layer framework](./images/figure_1_6.png)
 

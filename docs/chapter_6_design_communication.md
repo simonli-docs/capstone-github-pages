@@ -51,11 +51,9 @@ In capstone projects, the design team may be required to do several presentation
 
 When preparing a presentation, we should keep two factors in mind: (1) the time limit and (2) the target audience. In both schools or workplaces, running over in presentation is not appropriate (or unprofessional), and we should avoid it even by cutting the content (during the speech). In contrast to design reports, the target audience of design presentations tend to be more diverse (especially when the presentation session is handled as a social event that welcomes different stakeholders and interested parties). Altogether, one challenge for the design team is to organize the presentation content to help diverse audience understand the project in a relatively short time.
 
-As the design team has worked so hard for the capstone project, they tend to organize too much content, making the presentation choppy (e.g., switching speakers frequently) and difficult to follow. One open question to consider is: How much information can a person comprehend in 15-20 minutes? Reflected from our personal experience, it would not be a
-lot. Speaking faster would not help because it is limited by the cognitive capacity of a typical person. In addition, unlike reading, the audience cannot go back or rewind the content that they do not understand. All these explain the communication challenges in presentations.
+As the design team has worked so hard for the capstone project, they tend to organize too much content, making the presentation choppy (e.g., switching speakers frequently) and difficult to follow. One open question to consider is: How much information can a person comprehend in 15-20 minutes? Reflected from our personal experience, it would not be a lot. Speaking faster would not help because it is limited by the cognitive capacity of a typical person. In addition, unlike reading, the audience cannot go back or rewind the content that they do not understand. All these explain the communication challenges in presentations.
 
-To address the communication challenges, we suggest the design team to focus on "what the target audience want to know" instead of "what I want or need to say". Then, try to communicate the "big picture" rather than or before the technical details. The big-picture content includes the design's motivation, the overall design concept (or solution), and the
-verification evidence. Once the audience can grasp the big picture, they can follow up the technical details during the Q&A.
+To address the communication challenges, we suggest the design team to focus on "what the target audience want to know" instead of "what I want or need to say". Then, try to communicate the "big picture" rather than or before the technical details. The big-picture content includes the design's motivation, the overall design concept (or solution), and the verification evidence. Once the audience can grasp the big picture, they can follow up the technical details during the Q&A.
 
 ### Slides
 
@@ -83,8 +81,7 @@ Of course, don't forget to use figures and tables to communicate ideas. Especial
 
 ### Speeches
 
-During presentations, speeches are usually more important than slides, which are considered as "visual aids". That is, slides are supposed to support the presenter's speech. The audience can understand the content better if they can easily connect the visual content from the slide and the audio content from the speech. Thus, one advice for the presenter is
-to refer to the special portion of the slide that is related to their current speech (e.g., interact with the slide rather than just talk directly from the cue card). Ideally, the presenter can keep the eye contact with the audience occasionally during the speech.
+During presentations, speeches are usually more important than slides, which are considered as "visual aids". That is, slides are supposed to support the presenter's speech. The audience can understand the content better if they can easily connect the visual content from the slide and the audio content from the speech. Thus, one advice for the presenter is to refer to the special portion of the slide that is related to their current speech (e.g., interact with the slide rather than just talk directly from the cue card). Ideally, the presenter can keep the eye contact with the audience occasionally during the speech.
 
 Where should the presenter stand relative to the slide? Figure 3 illustrates three cases. Case A is good, as the presenter stands from the left side of the slide (in view of the audience). Since English is read from left to right, it is more natural for the audience to hear the voice from the left side when reading from the slide. Case B is less ideal, but it is still appropriate (especially when the physical space does not allow Case A). In Case C, other team members are standing between the presenter and the slide (it could happen when the design team is nervous in rotating presenters). This situation is certainly not ideal, and the design team should take the time to switch the positions of different speakers.
 
@@ -142,8 +139,7 @@ What if the design demo does not work on the spot? First, it should be a teamwor
 
 ## 6.5. Poster and video
 
-Compared to reports and presentations, posters and videos are different communication means that are intended for a wider and more diverse group of audience. They tend to take less time for the audience to grasp and appreciate the design idea. To this context, the design team can mainly focus on three questions in the preparation of the content for posters
-and videos.
+Compared to reports and presentations, posters and videos are different communication means that are intended for a wider and more diverse group of audience. They tend to take less time for the audience to grasp and appreciate the design idea. To this context, the design team can mainly focus on three questions in the preparation of the content for posters and videos.
 
 - What is the design problem?
 - How does the design solution work?

@@ -14,8 +14,7 @@ Design verification should only be conducted after the design solution is comple
 
 ## 4.1. Design verification and scientific practice
 
-Whenever people talk about "design," we can easily perceive it as "subjective" activities. Surely, as designers are "human subjects," we cannot avoid some subjective nature of design activities. At the same time, we can also provide more objective ground for engineering design work so that the final design solution is not completely subjective. One
-aspect of it is to treat design verification as a kind of scientific practice.
+Whenever people talk about "design," we can easily perceive it as "subjective" activities. Surely, as designers are "human subjects," we cannot avoid some subjective nature of design activities. At the same time, we can also provide more objective ground for engineering design work so that the final design solution is not completely subjective. One aspect of it is to treat design verification as a kind of scientific practice.
 
 In view of the tradition of scientific research, we can treat the final design solution as a scientific theory, and this "theory" tries to claim that it can solve the original design problem. No matter how beautiful a theory (or a design solution) may sound, it needs experiments (or design testing) to support its claim.
 
@@ -101,7 +100,7 @@ While it is attempting to verify and test "everything," our time and resources w
 
 ## 4.5: Develop a test plan (Task 2)
 
-A test plan can outline and explain the tasks for design verification so that team members and stakeholders can work together for the common goal. Suppose that the design team has identified the general scope of design verification for their project (i.e., Task 1 in Section 4.4). At a high level, a test plan needs to answer three questions:
+A test plan can outline and explain the tasks for design verification so that team members and stakeholders can work together for the common goal. Suppose that the design team has identified the general scope of design verification for their project (i.e., Task 1 in [Section 4.4](/chapter_4_design_verification/#44-decide-on-the-scope-of-verification-task-1)). At a high level, a test plan needs to answer three questions:
 
 - Question 1: How does the design team plan to obtain observable evidence, simulation and/or prototyping?
 - Question 2: What should we consider when planning for prototyping?
@@ -111,13 +110,11 @@ A test plan can outline and explain the tasks for design verification so that te
 
 Simulation can be interpreted as numerical experiments, which rely on the applications of engineering knowledge and scientific principles to evaluate the quality of the design solution. In practice, it is common to use software tools to support simulation activities (e.g., EnergyPlus for HVAC systems and Simulink for control systems).
 
-While simulation is often applied to time-based dynamic systems (i.e., how things change over time), the notion of "numerical experiments" can also be applied to other types of numerical analysis. For example, life-cycle analysis (LCA) can be used to examine the carbon emission (or other environment impacts) from the design solution. Finite-element
-analysis (FEA) can be used to examine the structural integrity of a physical construct.
+While simulation is often applied to time-based dynamic systems (i.e., how things change over time), the notion of "numerical experiments" can also be applied to other types of numerical analysis. For example, life-cycle analysis (LCA) can be used to examine the carbon emission (or other environment impacts) from the design solution. Finite-element analysis (FEA) can be used to examine the structural integrity of a physical construct.
 
 In design verification, prototyping can be referred to the use of physical prototypes to evaluate the quality of the design solution. Physical prototype is often perceived as a "golden standard" in design as it stands for a real object to be operated in the physical world. However, building a physical prototype requires a good amount of time and effort. The design team should be mindful to the verification purpose when they plan to build their physical prototype.
 
-Table 1 summarizes the pros and cons of simulation and prototyping. Apparently, it depends on the project's context and goal to decide on which approach to use for design verification. Generally, simulation is cheaper and safer, and thus it can support the investigation of "what-if" scenarios more promptly. On the other side, prototyping can
-provide empirical results (usually perceived as more "authentic") related to the physical world, but it tends to take more time and effort to develop.
+Table 1 summarizes the pros and cons of simulation and prototyping. Apparently, it depends on the project's context and goal to decide on which approach to use for design verification. Generally, simulation is cheaper and safer, and thus it can support the investigation of "what-if" scenarios more promptly. On the other side, prototyping can provide empirical results (usually perceived as more "authentic") related to the physical world, but it tends to take more time and effort to develop.
 
 Table 1. Comparison of simulation and prototyping
 
