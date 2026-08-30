@@ -100,7 +100,7 @@ While it is attempting to verify and test "everything," our time and resources w
 
 ## 4.5: Develop a test plan (Task 2)
 
-A test plan can outline and explain the tasks for design verification so that team members and stakeholders can work together for the common goal. Suppose that the design team has identified the general scope of design verification for their project (i.e., Task 1 in [Section 4.4](chapter_4_design_verification/#44-decide-on-the-scope-of-verification-task-1)). At a high level, a test plan needs to answer three questions:
+A test plan can outline and explain the tasks for design verification so that team members and stakeholders can work together for the common goal. Suppose that the design team has identified the general scope of design verification for their project (i.e., Task 1 in [Section 4.4](../chapter_4_design_verification/#44-decide-on-the-scope-of-verification-task-1)). At a high level, a test plan needs to answer three questions:
 
 - Question 1: How does the design team plan to obtain observable evidence, simulation and/or prototyping?
 - Question 2: What should we consider when planning for prototyping?

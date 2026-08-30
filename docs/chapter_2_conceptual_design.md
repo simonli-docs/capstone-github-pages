@@ -86,7 +86,7 @@ Some design decisions can directly impact how the design team is going to develo
 
 Conceptual design typically starts with a brief description of the problem. In practice, such problem description can be incomplete and even misleading because the problem providers (e.g., project sponsors, clients) may not know exactly what they want at the beginning. Then, the purpose of Task 1 is to refine the problem statement that fits the scope of the timeline, the skillsets of team members and the available resources.
 
-A good problem statement can help the design to stay on track and make meaningful deliverables in the end. It is [the duty of the design team]{.underline} to refine the problem statement for their design project. This task is difficult, and we expect some continuing revisions of the problem statement (e.g., the design team can modify the problem statement in the middle of the design process).
+A good problem statement can help the design to stay on track and make meaningful deliverables in the end. It is the duty of the design team to refine the problem statement for their design project. This task is difficult, and we expect some continuing revisions of the problem statement (e.g., the design team can modify the problem statement in the middle of the design process).
 
 To begin, we should have some idea whether we start with a proper problem statement or not. Consider the following two examples.
 
