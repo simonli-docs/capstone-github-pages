@@ -1,0 +1,1128 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://simonli-docs.github.io/capstone-github-pages/chapter_3_design_development/">
+      
+      
+        <link rel="prev" href="../chapter_2_conceptual_design/">
+      
+      
+        <link rel="next" href="../chapter_4_design_verification/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>3. Design Development - Capstone Design Guidebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-3-design-development" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Capstone Design Guidebook" class="md-header__button md-logo" aria-label="Capstone Design Guidebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Capstone Design Guidebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. Design Development
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Capstone Design Guidebook" class="md-nav__button md-logo" aria-label="Capstone Design Guidebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Capstone Design Guidebook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_1_introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_2_conceptual_design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Conceptual Design
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Design Development
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Design Development
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-what-is-the-destination-of-design-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1: What is the "destination" of design development?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-what-to-do-in-design-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2: What to do in design development?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-development-of-design-details-task-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3: Development of design details (Task 1)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-selection-of-design-components-task-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4: Selection of design components (Task 2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4: Selection of design components (Task 2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-options-are-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What options are available?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-criteria-for-the-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What are the criteria for the selection?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-analysis-of-design-properties-task-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5: Analysis of design properties (Task 3)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5: Analysis of design properties (Task 3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relevance-of-the-chosen-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relevance of the chosen analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-codes-and-standards-as-background-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6: Codes and standards as background research
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-use-of-genai-in-design-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7: Use of GenAI in design development
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_4_design_verification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4. Design Verification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_5_project_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5. Project Management
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chapter_6_design_communication/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6. Design Communication
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-what-is-the-destination-of-design-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1: What is the "destination" of design development?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-what-to-do-in-design-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2: What to do in design development?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-development-of-design-details-task-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3: Development of design details (Task 1)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-selection-of-design-components-task-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4: Selection of design components (Task 2)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4: Selection of design components (Task 2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-options-are-available" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What options are available?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-criteria-for-the-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What are the criteria for the selection?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35-analysis-of-design-properties-task-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5: Analysis of design properties (Task 3)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5: Analysis of design properties (Task 3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relevance-of-the-chosen-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relevance of the chosen analysis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#36-codes-and-standards-as-background-research" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6: Codes and standards as background research
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#37-use-of-genai-in-design-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7: Use of GenAI in design development
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-3-design-development">Chapter 3: Design Development<a class="headerlink" href="#chapter-3-design-development" title="Permanent link">&para;</a></h1>
+<p>Design development is the design stage that involves "real design work" (i.e., both the design team and the stakeholders can readily identify the design effort and accomplishments). The design team can receive more hands-on and practical design experience. Beyond the technical know-hows, the design team can also compare and reflect on the differences between the design concepts developed in conceptual design and the design details developed in design development. Such reflection can improve our conceptual design skills in the future.</p>
+<h2 id="31-what-is-the-destination-of-design-development">3.1: What is the "destination" of design development?<a class="headerlink" href="#31-what-is-the-destination-of-design-development" title="Permanent link">&para;</a></h2>
+<p>The purpose of design development is to develop the design details for the (selected) design concept. While this definition is not difficult to understand, one practice question remains: how much design details do we need in a capstone project? This is the "destination" question that we want to answer in this section.</p>
+<p>As a short answer, the design details should be sufficient for the design team to (1) analyze the engineering properties of the design solution and (2) verify the performance of the design solution.</p>
+<p>In engineering practice, the gap from design solutions to the construction or production stage is huge. In a typical design project, we do not expect the design team should aim to develop design details for construction or production. Let us take two examples to explain further.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: HVAC design</p>
+<p>It is probably easy to understand that a capstone design team is not expected to build a HVAC system for a building. Yet, there can be different levels of design details that the design team can consider, listed below from high to low (or detailed) levels, for the HVAC design content.</p>
+<ul>
+<li>Level 1: High-level system schematics (showing the connections between major sub-systems and components)</li>
+<li>Level 2: Specifications (e.g., sizes) of major sub-systems and components</li>
+<li>Level 3: Operational sequences and control</li>
+<li>Level 4: Sufficient design details to conduct building energy simulation, life cycle analysis and cost analysis</li>
+<li>Level 5: Construction drawings</li>
+<li>Level 6: Maintenance schedules</li>
+</ul>
+<p>Notably, these levels are only approximate to illustrate the idea. Generally, the design details from Levels 1 to 4 are appropriate for a capstone project. Construction drawings contain a lot more design details that will be used by contractors to build the HVAC system on site. Maintenance schedules will depend on the actual equipment being for the HVAC system. In practice, construction drawings and maintenance schedules will take a lot of effort to develop and require domain-specific skills.</p>
+<p>Whether some design details should be included in a capstone project or not can be argued. One example is the ductwork layout and sizing, which content is close to the level of construction drawings. From the educational standpoint, the work of the ductwork layout and sizing can provide an adequate and good learning experience. Arguably, the relevant content does not affect too much the building's performance.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example: Snow removal design</p>
+<p>Suppose that the design team is very competent. From scratch, they can make a snow removal device that can clear snow for normal conditions and operate autonomously. Yet, it is important to distinguish prototyping and production. To the stage of production (e.g., to make 100 units of the snow removal device), it will require more new design details that support the production process.</p>
+<p>Consider the mechanical design content for this example. There can be different levels of design details, from high to low, as listed below.</p>
+<ul>
+<li>Level 1: Sketches of mechanical components and systems</li>
+<li>Level 2: 3D CAD models of components and assembly</li>
+<li>Level 3: Detailed 2D mechanical drawings</li>
+</ul>
+<p>Typically, the design details of Levels 1 and 2 are sufficient in a capstone project as they can effectively inform how the design solution works and support different kinds of mechanical design analysis. In contrast, it is arguable to consider whether detailed 2D mechanical drawings are needed. The purpose of this type of drawings is to inform the machinists or manufacturing staff how exactly the mechanical components should be made. It contains more manufacturing-related details such as manufacturing features (e.g., rounds versus chamfers) and tolerances.</p>
+<p>From the educational standpoint, making detailed 2D mechanical drawings can provide an adequate and good learning experience. Arguably, the relevant content does not affect too much the functional performance of the snow removal device.</p>
+</div>
+<h2 id="32-what-to-do-in-design-development">3.2: What to do in design development?<a class="headerlink" href="#32-what-to-do-in-design-development" title="Permanent link">&para;</a></h2>
+<p>Figure 1 illustrates a structure of design tasks for design development. The stage of design development starts with a design concept that was proposed from conceptual design. Then, the design team can consider three types of design tasks to further develop the design details.</p>
+<ul>
+<li>
+<p>Task 1: Develop design details. Examples of design details include form and shape, parametric values, circuit boards, and codes.</p>
+</li>
+<li>
+<p>Task 2: Select design components. Examples include selection of materials, off-the-shelf components, and algorithms.</p>
+</li>
+<li>
+<p>Task 3: Analyze engineering properties. Examples include checking specifications and performance metrics, environmental analysis, and cost analysis.</p>
+</li>
+</ul>
+<p>Background research can support designers in conducting these design tasks. Examples include learning a new software tool, checking safety codes, and examining the product catalogs for component selection.</p>
+<p>Problem framing in design development is about how to formulate these design tasks so that the design details are meaningful and beneficial to resolve the original design problem. One common "trap" for students is that they want to show how they know and apply knowledge from courses, where they may overlook the relevance of their work in the project's
+context. We will explain more on this point in the following sub-sections for each type of design tasks.</p>
+<p><img alt="" src="../images/figure_3_1.png" /></p>
+<p>Figure 1. Structure of design tasks in design development</p>
+<h2 id="33-development-of-design-details-task-1">3.3: Development of design details (Task 1)<a class="headerlink" href="#33-development-of-design-details-task-1" title="Permanent link">&para;</a></h2>
+<p>In a design project, one important information is to inform how the final design looks like. The answer to this question varies with the level of details of the design. While the conceptual design result presents a high-level picture to capture the general idea, we need more design details to implement the design idea in practice.</p>
+<p>The level of details required in the capstone projects vary significantly. It depends on the nature (or scope) of the project and the stakeholders' expectations. In engineering design, we can have various forms to develop and present the design details.</p>
+<div class="admonition example">
+<p class="admonition-title">Example 1: CAD models</p>
+<p>In mechanical design, it is common to use CAD software (e.g., SolidWorks) to develop the design details. The effort to develop CAD models can be significant. Figure 2 shows a sample of an assembly model with several gears, and Figure 3 shows a sample of a component model.</p>
+<p>In practice, it can take a lot of effort to model a "simple" component. Thus, the design team should be selective in choosing important components for the capstone project. CAD models can be useful in capstone projects in the following ways.</p>
+<ul>
+<li>To provide an overview of the "shape" of the final design to stakeholders. It is aligned with the idiom "a picture is worth a thousand words".</li>
+<li>To support engineering analyses that use CAD models (e.g., finite element analysis)</li>
+<li>To support 3D printing and machining</li>
+</ul>
+<p>Engineering drawings, illustrated in Figure 4, serve a different purpose than 3D CAD models. The target audience of engineering drawings are usually technical staff for the purpose of fabrication (e.g., a job request to a technician to make a mechanical component). Engineering drawings usually contain too many details for typical design communications.</p>
+</div>
+<p><img alt="" src="../images/figure_3_2.png" />
+Figure 2. Sample of a CAD assembly model (Source: https://commons.wikimedia.org)</p>
+<p><img alt="" src="../images/figure_3_3.jpeg" /></p>
+<p>Figure 3. Sample of a CAD component model (Source: https://commons.wikimedia.org)</p>
+<p><img alt="" src="../images/figure_3_4.png" />
+Figure 4. Sample of an engineering drawing (Source: https://commons.wikimedia.org)</p>
+<div class="admonition example">
+<p class="admonition-title">Example 2: Process diagrams</p>
+<p>Process diagrams are common to describe and explain the final design of chemical processes (e.g., filtration, refinery). Figure 5 illustrates a schematic level of a process diagram, which is proper for explanation (e.g., to explain how the process works in principle during a presentation).</p>
+<p>In contrast to a schematic diagram. Piping and instrumentation diagrams (P&amp;ID) show more details of process equipment and instrumentation devices. Figure 6 shows a sample of P&amp;ID.</p>
+<p>While both schematic diagrams and P&amp;ID are good content for capstone projects, the design team can deliberate which diagrams are suitable in different contexts of design communications. For example, P&amp;ID can be good in the report because the reader can take time to digest the details. In contrast, schematic diagrams can be more appropriate to communicate the design ideas in presentations or Design Fair.</p>
+</div>
+<p><img alt="" src="../images/figure_3_5.jpeg" /></p>
+<p>Figure 5. Sample of a process diagram at a schematic level (Source: <a href="https://commons.wikimedia.org">https://commons.wikimedia.org</a>)</p>
+<p><img alt="" src="../images/figure_3_6.png" /></p>
+<p>Figure 6. Sample of a P&amp;ID (Source: <a href="https://commons.wikimedia.org">https://commons.wikimedia.org</a>)</p>
+<div class="admonition example">
+<p class="admonition-title">Example: Electrical and control diagrams</p>
+<p>Diagrams are common in mechatronics and electrical engineering. Figure 7 shows a sample of block diagram for the control design.</p>
+</div>
+<p><img alt="" src="../images/figure_3_7.jpeg" /></p>
+<p>Figure 7. Sample of a block diagram (Source: <a href="https://commons.wikimedia.org">https://commons.wikimedia.org</a>)</p>
+<div class="admonition note">
+<p class="admonition-title">Graphical information and design development</p>
+<p>In engineering practice, design details are often communicated in graphical formats. Whenever it is applicable, design teams are encouraged to use graphs and diagrams to communicate their design ideas. When using graphs and diagrams, we have some guidance notes.</p>
+<ul>
+<li>Engineering graphics and diagrams are specific to their own disciplines and purposes. Follow the domain-specific convention when creating graphical information.</li>
+<li>With the same design solution, graphs and diagrams can convey different levels of design details. Design teams should be mindful to select an appropriate level of design details for different communication purposes. As a rule of thumb, in presentations and Design Fair, focus on sharing the design ideas using a schematic level of details (e.g., the audience can grasp the design idea by looking at the diagram for one minute). Graphs and diagrams with detailed information can be used in reports and in technical discussions.</li>
+</ul>
+</div>
+<h2 id="34-selection-of-design-components-task-2">3.4: Selection of design components (Task 2)<a class="headerlink" href="#34-selection-of-design-components-task-2" title="Permanent link">&para;</a></h2>
+<p>In design development, we may need to select design components (e.g., off-the-shelf components, control methods) for the final design solution or prototype. For example, in the design of the HVAC system, the design team should need to select several key components or equipment such as boilers, fans, and chiller units. In the design of the snow removal
+device, the design team should need to select motors and materials of the frame.</p>
+<p>When we plan to address a selection problem, we should consider two questions:</p>
+<ol>
+<li>What options are available?</li>
+<li>What are the criteria for the selection?</li>
+</ol>
+<h3 id="what-options-are-available">What options are available?<a class="headerlink" href="#what-options-are-available" title="Permanent link">&para;</a></h3>
+<p>We should first distinguish if we select items for the design prototype or for the paper design. Typically, the choices for the design prototype are quite limited, and they depend on:</p>
+<ul>
+<li>Prototyping resources available on campus. For example, the machine shop and procurement department often have a long-term relation with suppliers that confine what are available for the capstone projects.</li>
+<li>Resources provided by the project's sponsor. For example, the sponsor may ask the design team to use their motors for designing the snow removal device.</li>
+</ul>
+<p>Though it may sound quite restrictive, the reality is that we cannot always get exactly what we want. Keep in mind that the design prototype is NOT the final product to the field or market. The goal of the selection can be aligned with the intent of the prototype in the capstone project.</p>
+<div class="admonition question">
+<p class="admonition-title">How about ordering items from Internet?</p>
+<p>It's not a bad idea. To go for this option, the design team should consider:</p>
+<ul>
+<li>Will the sponsor cover the cost?</li>
+<li>Is it a shipment from a foreign country? Though the delivery time can be estimated, the actual arrival can be different. Given a short period of the capstone project, a two-week delay can be quite frustrating.</li>
+<li>Is the part to be ordered critical to the project's success? If so, consider some contingency plan when the critical part does not arrive on time.</li>
+</ul>
+</div>
+<p>In paper design, the choices for the selection are theoretically unlimited. Yet, in some traditional industry (e.g., HVAC, oil &amp; gas process), the choices are often restricted by conventions and regulations.</p>
+<div class="admonition example">
+<p class="admonition-title">Example: HVAC design -- a weak selection problem</p>
+<p>Air ducts of a HVAC system are often made by galvanized steel. In theory, we can probably propose other materials (e.g., aluminum) and then run some selection process. Yet, this exercise will be viewed unnecessary because the conventional choice (galvanized steel) has been working well for many years. Alternative materials should only be considered for special design needs.</p>
+</div>
+<h3 id="what-are-the-criteria-for-the-selection">What are the criteria for the selection?<a class="headerlink" href="#what-are-the-criteria-for-the-selection" title="Permanent link">&para;</a></h3>
+<p>Selection criteria have been discussed in the chapter of Conceptual Design. Ideally, some selection criteria can be related to design specifications. A good choice is received if it can satisfy all design specifications and other considerations.</p>
+<p>Like a decision problem, we can organize the information in a decision matrix for the selection problem. Several examples are provided below.</p>
+<div class="admonition example">
+<p class="admonition-title">Example 1: Selection of packaged systems for HVAC design</p>
+<p>Four selection criteria can be identified as follows.</p>
+<ul>
+<li>Criterion 1: Maximum air flowrate. It is related to the capacity of the packaged system.</li>
+<li>Criterion 2: Overall size. It is related to the available building space to install the packaged system.</li>
+<li>Criterion 3: Supplier. We may want to know the suppliers to examine the issues of technical compatibility of the whole building system.</li>
+<li>Criterion 4: Equipment cost.</li>
+</ul>
+<p>Suppose that we are considering two packaged systems. Then, we can set up a decision matrix as in Table 1. In each table's entry, we can enter the information or relative merit of two systems in view of each selection criterion (qualitatively and quantitatively). The purpose of the decision matrix is NOT to identify the winner; instead, it is only intended to show the information of comparisons in a compact format (where different stakeholders can comment the decision easily).</p>
+</div>
+<p>Table 1. Sample of a decision matrix for a selection problem</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Maximum air flowrate</th>
+<th>Overall size</th>
+<th>Supplier</th>
+<th>Equipment cost</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Packaged system 1</td>
+<td>8,000 L/s</td>
+<td>Area: 1.5m×1.8m<br>Height: 1.2m</td>
+<td>Company A</td>
+<td>$25,000</td>
+</tr>
+<tr>
+<td>Packaged system 2</td>
+<td>10,000 L/s</td>
+<td>Area: 2m×2m<br>Height: 1.5m</td>
+<td>Company B</td>
+<td>$30,000</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition example">
+<p class="admonition-title">Example 2: Selection of chiller units for HVAC design</p>
+<p>Three selection criteria can be identified as follows.</p>
+<ul>
+<li>Criterion 1: Cooling capacity. In engineering analysis, the design team should have determined the peak cooling load for the building. The peak cooling load information will be used to check the cooling capacity of the chiller units.</li>
+<li>Criterion 2: Coefficient of performance (COP). It is about the energy efficiency of the chiller.</li>
+<li>Criterion 3: Refrigerant. The choice of refrigerant will influence the design of pumps and piping. Also, it has a strong environmental implication.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 3: Selection of fans for HVAC design</p>
+<p>Three selection criteria can be identified as follows.</p>
+<ul>
+<li>Criterion 1: Maximum flowrate. It is used to examine the airflow requirements.</li>
+<li>Criterion 2: Maximum pressure rise. It is related to overcoming the pressure drops of the ductwork.</li>
+<li>Criterion 3: Fan curve. It represents the profiles of pressure rise with respect to the air flowrate. It helps to understand the behaviors of the fan in part-load conditions.</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 4: Selection of motors for snow removal design</p>
+<p>Two selection criteria can be identified as follows.</p>
+<ul>
+<li>Criterion 1: Maximum torque. Check if the motor can provide enough push force for snow removal.</li>
+<li>Criterion 2: Weight. For checking the total weight of the autonomous device</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 5: Selection of the frame's materials for snow removal design</p>
+<p>Three selection criteria can be identified as follows.</p>
+<ul>
+<li>Criterion 1: Strength. The yield strength of the material will influence the design of the frame.</li>
+<li>Criterion 2: Manufacturability. It is related to the joining method to construct the frame.</li>
+<li>Criterion 3: Weight. The frame should contribute to a noticeable portion of the total weight.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note: Do not trivialize selection problems</p>
+<p>When the selection (or choice) can be easily made, do not formulate a selection problem and create a decision matrix. We can simply report the selection that has been made. An authentic use of decision matrix takes certain time and effort. We should only formulate the selection problems using decision matrix when the decisions involve trade-off and can influence the design outcomes substantially.</p>
+</div>
+<h2 id="35-analysis-of-design-properties-task-3">3.5: Analysis of design properties (Task 3)<a class="headerlink" href="#35-analysis-of-design-properties-task-3" title="Permanent link">&para;</a></h2>
+<p>The purpose of engineering analysis is to determine some properties related to the design idea and support the development of design details and decision making. Figure 8 illustrates the conceptual relationship between design solutions (or details) and design properties. Engineering analysis is well aligned with the applied science tradition. We should
+have learned many analyses from earlier engineering courses such as:</p>
+<ul>
+<li>Analysis of force and motion (statics, kinematics, kinetics, mechanisms)</li>
+<li>Analysis of stress / strain and material properties</li>
+<li>Analysis of thermal / fluid systems (thermodynamics, fluid mechanics and heat transfer)</li>
+<li>Analysis of control systems (transfer function and feedback control)</li>
+<li>Finite element analysis (FEA)</li>
+<li>Computational fluid dynamics (CFD)</li>
+<li>Life cycle analysis (LCA)</li>
+<li>Cost and benefit analysis</li>
+</ul>
+<p><img alt="" src="../images/figure_3_8.png" /></p>
+<p>Figure 8. Conceptual relationship between design details and design properties</p>
+<p>Figure 9 illustrates two samples of engineering analysis for the HVAC design. After we have identified the building's location, we can know the climate information (e.g., design days). Then, by knowing the design details of the building envelope, we can calculate the peak heating and cooling loads of the building. The information can be used to size the
+heating and cooling equipment. For the air distribution system, suppose that we have determined the duct size and selected the fan. We can utilize the fluid mechanics knowledge (and software tools) to determine the flowrate and pressure drops of the system.</p>
+<p><img alt="" src="../images/figure_3_9.png" /></p>
+<p>Figure 9. Samples of engineering analysis for the HVAC design</p>
+<p>Figure 10 illustrates two samples of engineering analysis for the snow removal design. Suppose that we have designed a four-bar mechanism for the shovel. We can then apply kinematic analysis to examine the positions of the shovel relative to the motor (or actuator). By knowing the detailed design of the connection rod, we can analyze the stress and strain properties of the connection rod using finite element analysis.</p>
+<p><img alt="" src="../images/figure_3_10.png" /></p>
+<p>Figure 10. Samples of engineering analysis for the snow removal design</p>
+<p>Engineering analysis is often domain specific. In the following, we list some examples of engineering analysis that are typical in capstone projects.</p>
+<div class="admonition example">
+<p class="admonition-title">Example 1: Analysis of force and motion</p>
+<ul>
+<li>Kinematic analysis of a robotic arm</li>
+<li>Static force analysis of a walker support (to understand the risk of tipping over)</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 2: Analysis of stress / strain and material properties</p>
+<ul>
+<li>Analyze the maximum stress point of an robotic arm under the maximum loading.</li>
+<li>Snow removal case: Analyze the maximum stress (value and location) of the connection rod (connecting the shovel and the robot's body).</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 3: Analysis of thermal / fluid systems</p>
+<ul>
+<li>Analysis of pressure drops of different pipe sections of a chemical process.</li>
+<li>HVAC case: Analyze the peak load conditions to size the HVAC system</li>
+<li>HVAC case: Analyze the annual energy consumption of the HVAC system</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 4: Analysis of control systems</p>
+<ul>
+<li>Analyze the responses of a PID controller</li>
+<li>Analyze the spring-damper system for designing the suspension system</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 5: Finite element analysis (FEA)</p>
+<ul>
+<li>Analyze the distribution of stress of a landing gear due to impact forces</li>
+<li>Analyze the distribution of stress of a plane's wing under different air pressures</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 6: Computational fluid dynamics (CFD)</p>
+<ul>
+<li>Analyze the distribution of temperatures of a heated surface</li>
+<li>HVAC case: Analyze the distribution of smoke with the ventilation system running</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 7: Life cycle analysis (LCA)</p>
+<ul>
+<li>Compare the lifespans and embodied energy of two materials for the design</li>
+<li>HVAC case: Analyze the environmental impact of a refrigerant</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example 8: Cost and benefit analysis</p>
+<ul>
+<li>Estimate the implementation cost and the operation cost of a chemical process</li>
+<li>HVAC case: Estimate the breakeven period of an energy-saving measure (e.g., a solar panel)</li>
+</ul>
+</div>
+<h3 id="relevance-of-the-chosen-analysis">Relevance of the chosen analysis<a class="headerlink" href="#relevance-of-the-chosen-analysis" title="Permanent link">&para;</a></h3>
+<p>In the early learning process, we tend to focus on the "correctness" of the analysis. For example, we have done a lot of problem sets and checked the correct answers as the last step. No doubt. Correctness is essential. Yet, in a workplace, we normally assume that engineering graduates can do correct analyses. A practical and important challenge though is about the "relevance" of the analysis. That is, is the analysis result relevant to any design decisions and development.</p>
+<div class="admonition example">
+<p class="admonition-title">Example of irrelevant analysis (FEA)</p>
+<p>Use FEA to identify the maximum stress point of a hand-operating handle that is made by steel. This analysis can be done correctly but the FEA result will likely have no influence to the design details. Why? Because the stress level incurred by hand operations will not likely cause the failure of the steel.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example of irrelevant analysis (CFD)</p>
+<p>Use CFD to determine the flowrate of a fluid system. Normally, the average flowrate information can be estimated by a mass balance principle. CFD does not have a unique advantage to know this information, except it is more difficult to operate.</p>
+</div>
+<p><strong>General advice:</strong> Engineering analysis is a good place to demonstrate the scientific competence of the design team. Yet, we should not choose to work on an analysis problem simply because we want to show people "I know how to do ABC analysis". A meaningful analysis should have some influence on the development of design details.</p>
+<p>In the following, we try to provide some examples of relevant and irrelevant analyses.</p>
+<div class="admonition example">
+<p class="admonition-title">Snow removal example – Analysis of force and motion</p>
+<ul>
+<li><strong>Relevant analysis</strong><ul>
+<li>Analyze the maximum push force for the case of maximum amount to be removed</li>
+<li>Analyze the tire friction and accordingly the torque requirement from the motor</li>
+</ul>
+</li>
+<li><strong>Less-relevant analysis</strong><ul>
+<li>Analyze the top speed of the autonomous robot when there is no snow loading.</li>
+<li>Why? Well... it can be an interesting information to know. But the purpose of the snow removal robot is to remove snow. Its speed (under various conditions) is not of top concern.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Snow removal example – Analysis of stress / strain and material properties</p>
+<ul>
+<li><strong>Relevant analysis</strong><ul>
+<li>Analyze the maximum stress (value and location) of the connection rod (connecting the shovel and the robot's body).</li>
+</ul>
+</li>
+<li><strong>Less-relevant analysis</strong><ul>
+<li>Compare different plastic properties for the material of the shell of the robot's body. </li>
+<li>Why? Again... it is a good academic exercise. Yet, at the early conception and prototyping stage, we will likely not put the robot's body in some extreme conditions. So some "reasonable choice" of the shell's material will likely be sufficient. After the comparison of different plastic properties, we may end up with the material that the team wants to go for initially    (without running the comparison).</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">HVAC example – Analysis of thermal properties</p>
+<ul>
+<li><strong>Relevant analysis</strong><ul>
+<li>Analyze the peak load conditions to size the HVAC system</li>
+<li>Analyze the annual energy consumption of the HVAC system</li>
+</ul>
+</li>
+<li><strong>Less-relevant analysis</strong><ul>
+<li>Analyze the strength of the duct work material.</li>
+<li>Why? The duct work material is often standardized for typical applications. Such analysis can be relevant if the design situation is unique and the material's strength is critical.</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="36-codes-and-standards-as-background-research">3.6: Codes and standards as background research<a class="headerlink" href="#36-codes-and-standards-as-background-research" title="Permanent link">&para;</a></h2>
+<p>Codes and standards are common in engineering practice. Sometimes they can influence how we determine the design details. Thus, the design team is encouraged to explore the relevant codes and standards as background research for the capstone project (e.g., consult the project's sponsor).</p>
+<div class="admonition example">
+<p class="admonition-title">Example: HVAC design</p>
+<p>Fire codes should specify the maximum occupancy of a building. Per indoor air quality standards, the number of occupants and the type and area of a building's space should determine the minimum requirement of outdoor airflow, which will impact the fan's size, heating / cooling loads, and the energy consumption.</p>
+</div>
+<h2 id="37-use-of-genai-in-design-development">3.7: Use of GenAI in design development<a class="headerlink" href="#37-use-of-genai-in-design-development" title="Permanent link">&para;</a></h2>
+<p>GenAI is useful in search for information. In design development, GenAI can be useful for background research (e.g., codes and standards, engineering parameters, conventional design decisions). With the responses from GenAI, for important information, the design team needs to identify the original sources of the information as due diligence in engineering practice.</p>
+<p>Keep in mind that GenAI can provide us convenient information and give us ideas for certain types of work. However, GenAI cannot replace our understanding. In teamwork, we communicate through our own understanding (i.e., we cannot communicate effectively if we essentially do not understand something). This can be considered as one boundary when we use GenAI for the design work.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Simon Li
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "navigation.sections", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
