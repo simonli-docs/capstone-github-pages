@@ -24,7 +24,7 @@ _Figure 2. Conception of an iterative process_
 
 Design iteration is very common because we cannot predict the design outcomes with 100% accuracy. We often need to try out an idea, test it and then improve it. Thus, design iteration should not be perceived as a deficiency.
 
-Of course, uncontrolled and undisciplined design iteration is not good, as this practice can lead to undesirable design outcomes by the end of the design project. This aspect will be discussed in the chapter of [project management](chapter_5_project_management/).
+Of course, uncontrolled and undisciplined design iteration is not good, as this practice can lead to undesirable design outcomes by the end of the design project. This aspect will be discussed in the chapter of [project management](/chapter_5_project_management/).
 
 ### **Engineering design is about problem solving.**
 
