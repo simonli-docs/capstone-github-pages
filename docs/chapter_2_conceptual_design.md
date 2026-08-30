@@ -53,9 +53,9 @@ It is related to the cost of making design changes. During the conceptual design
 
 ## 2.3: What tasks should I do in conceptual design?
 
-Conceptual design is abstract, and thus it is not clear what tasks the design team should work on in this design stage. Traditional design textbooks provide various advice and methods to support concept generation (e.g., morphological chart) and concept selection (e.g., decision matrix). These are good content, which can be considered as "knowledge inventory" (see Figure 6 in [Chapter 1.4](/chapter_1_introduction/#14-cognitive-design-tasks)) for capstone design work.
+Conceptual design is abstract, and thus it is not clear what tasks the design team should work on in this design stage. Traditional design textbooks provide various advice and methods to support concept generation (e.g., morphological chart) and concept selection (e.g., decision matrix). These are good content, which can be considered as "knowledge inventory" (see Figure 6 in [Chapter 1.4](chapter_1_introduction/#14-cognitive-design-tasks)) for capstone design work.
 
-We can further consider the conceptual design work in view of [cognitive design tasks](/chapter_1_introduction/#14-cognitive-design-tasks). Instead of prescribing procedures for design activities, designers need to make sense of the given design problem and formulate design tasks that can contribute to the resolution of the design problem. Corresponding to five types of
+We can further consider the conceptual design work in view of [cognitive design tasks](chapter_1_introduction/#14-cognitive-design-tasks). Instead of prescribing procedures for design activities, designers need to make sense of the given design problem and formulate design tasks that can contribute to the resolution of the design problem. Corresponding to five types of
 cognitive design tasks, five specific tasks for conceptual design are suggested, and their conceptual relationships are illustrated in Figure 1 below. After the high-level introduction below, these tasks will be further explained in subsequent sections.
 
 ![Figure 2.1. Five cognitive design tasks in conceptual design](./images/figure_2_1.png)

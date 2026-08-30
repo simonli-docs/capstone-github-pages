@@ -29,4 +29,6 @@ markdown_extensions:
   - toc:
       permalink: true
 
+site_url: https://simonli-docs.github.io/capstone-github-pages/
+
 copyright: Copyright &copy; 2026 Simon Li

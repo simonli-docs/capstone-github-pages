@@ -100,7 +100,7 @@ While it is attempting to verify and test "everything," our time and resources w
 
 ## 4.5: Develop a test plan (Task 2)
 
-A test plan can outline and explain the tasks for design verification so that team members and stakeholders can work together for the common goal. Suppose that the design team has identified the general scope of design verification for their project (i.e., Task 1 in [Section 4.4](/chapter_4_design_verification/#44-decide-on-the-scope-of-verification-task-1)). At a high level, a test plan needs to answer three questions:
+A test plan can outline and explain the tasks for design verification so that team members and stakeholders can work together for the common goal. Suppose that the design team has identified the general scope of design verification for their project (i.e., Task 1 in [Section 4.4](chapter_4_design_verification/#44-decide-on-the-scope-of-verification-task-1)). At a high level, a test plan needs to answer three questions:
 
 - Question 1: How does the design team plan to obtain observable evidence, simulation and/or prototyping?
 - Question 2: What should we consider when planning for prototyping?
@@ -133,8 +133,7 @@ Table 1. Comparison of simulation and prototyping
 
 ### Question 2: What to consider when planning for prototyping?
 
-The most important consideration is to evaluate whether the design team can secure the required resources and have enough time to develop physical prototypes. In this aspect, capstone projects are not different from design projects in companies. Even a company has certain resources (e.g., materials, equipment, lab facility) that can support design work,
-it does not mean that those resources are freely available for the design team whenever they want. The design team is expected to have good communication and management skills to work with relevant stakeholders and plan for the prototyping process.
+The most important consideration is to evaluate whether the design team can secure the required resources and have enough time to develop physical prototypes. In this aspect, capstone projects are not different from design projects in companies. Even a company has certain resources (e.g., materials, equipment, lab facility) that can support design work, it does not mean that those resources are freely available for the design team whenever they want. The design team is expected to have good communication and management skills to work with relevant stakeholders and plan for the prototyping process.
 
 In prototyping, one common question is how to get the parts or sub-systems for the physical prototype. Typically, we can have three approaches.
 
@@ -154,8 +153,7 @@ The use of 3D printing is also so common in practice. Generally, 3D printing can
 
 To some design teams, prototyping is attractive because it can enrich hands-on learning experience, and finished prototypes can clearly demonstrate design intelligence and effort. Yet, in engineering practice, we do not develop prototypes merely for the show-and-tell reason. Instead, we make prototypes to serve the design verification purpose. That is, if there is no apparent reason for design verification, the design team should re-consider whether they should proceed to making physical prototypes.
 
-In prototyping, it is common to have a gap between what the design team wants and what the reality can offer. For example, a resource is anticipated to support prototyping or physical testing, but it becomes unavailable when needed. While this situation is unfortunate, keep in mind that physical prototypes are only a means to design verification,
-and they are not the only means. The design team can still be flexible to consider other available resources and adjust the plan for design verification.
+In prototyping, it is common to have a gap between what the design team wants and what the reality can offer. For example, a resource is anticipated to support prototyping or physical testing, but it becomes unavailable when needed. While this situation is unfortunate, keep in mind that physical prototypes are only a means to design verification, and they are not the only means. The design team can still be flexible to consider other available resources and adjust the plan for design verification.
 
 !!! example "Example: HVAC design (fall short of the expectation)"
 
