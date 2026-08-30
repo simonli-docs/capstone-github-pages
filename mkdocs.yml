@@ -1,5 +1,6 @@
 site_name: Capstone Design Guidebook
-site_url: https://simonli-docs.github.io/capstone-github-pages
+site_url: https://simonli-docs.github.io/capstone-github-pages/
+base_url: /capstone-github-pages/
 
 nav:
   - Home: index.md
